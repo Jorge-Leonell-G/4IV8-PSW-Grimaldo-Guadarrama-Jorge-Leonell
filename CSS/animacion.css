@@ -1,0 +1,68 @@
+/*
+Vamos a crear una animacion a partir de frames
+y los vamos a girar, alternar y transformar
+*/
+
+/*
+condicionales
+*/
+
+@keyframes animation_test{
+    from{
+        background-color: red;
+    }
+    to{
+        background-color: yellow;
+    }
+}
+
+@keyframes girar{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes label-animation{
+    from{
+        transform: rotate(0deg);
+        margin-left: 0;
+    }
+    to{
+        transform: rotate(180deg);
+        margin-left: 85vw;
+    }
+}
+
+/*
+vamos a dar las reglas de las clases
+*/
+
+.label-container{
+    width: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.label{
+    width: 64px;
+    background-color: rgb(60, 189, 85);
+    color: white;
+    font-size: 1rem;
+    padding: 1rem;
+    border-radius: 20px;
+    text-align: center;
+
+    /*Animacion*/
+    animation-name: label-animation;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+}
+
+
+
