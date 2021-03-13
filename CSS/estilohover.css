@@ -1,6 +1,6 @@
 :root{
-    --body-bg-color:#6cc7f5;
-    --text-color:#aaaebc;
+    --body-bg-color:#c376d6;
+    --text-color:#9ca8d4;
     --hr-color:#237891;
     --red: rgb(255,0,0);
 }
@@ -37,7 +37,7 @@ hr{
 }
 
 .menu li{
-    margin: 70px;
+    margin-right: 70px;
 }
 
 .menu a{
@@ -93,11 +93,11 @@ hr{
 
 
 .menu[data-animation = "to-right"] a span:last-child{
-    transform: translateX(100%);
+    transform: translateX(-100%);
 }
 
 .menu[data-animation = "to-right"] a span:first-child{
-    transform: translateX(-100%);
+    transform: translateX(100%);
 }
 
 
