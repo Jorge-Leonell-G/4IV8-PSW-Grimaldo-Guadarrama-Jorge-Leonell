@@ -36,3 +36,16 @@ article, aside{
 nav, section, footer{
     background-color: #004E66;
 }
+
+
+/*Cambios para mi curriculum*/
+.cu-container{
+    border: 3px solid rgb(187, 27, 187);
+    margin: 8rem;
+}
+
+.cu-nav, .cu-section{
+    background-color: rgb(208, 212, 216);
+    border: 2px solid rgb(155, 129, 129);
+}
+
