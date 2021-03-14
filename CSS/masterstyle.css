@@ -6,7 +6,7 @@
 }
 
 html, body{
-    background-color: #522B29;
+    background-color: #644442;
 }
 
 .main-container{
@@ -37,15 +37,53 @@ nav, section, footer{
     background-color: #004E66;
 }
 
+/*condicional para la animacion de mi correo*/
+@keyframes desplazar{
+    from{
+        margin-left: 0;
+    }
+    to{
+        margin-left: 36vw;
+    }
+}
 
 /*Cambios para mi curriculum*/
+.cu-title{
+    width: 400px;
+    display: flex;
+    float: center;
+}
+
 .cu-container{
-    border: 3px solid rgb(187, 27, 187);
+    border: 3px solid rgb(104, 14, 104);
     margin: 8rem;
 }
 
 .cu-nav, .cu-section{
     background-color: rgb(208, 212, 216);
     border: 2px solid rgb(155, 129, 129);
+    padding: 1rem;
+    justify-content: center;
+}
+
+.correo-campo{
+    text-align: left;
+    box-sizing: border-box;
+    animation: desplazar 4s ease-in-out infinite alternate;
+}
+
+hr{
+    border-color: #004E66;
+}
+
+i{
+    font-size: 18px;
+    font-style: normal;
+    color: rgb(95, 26, 47);
+}
+
+.primaria{
+    box-sizing: border-box;
+    border-top: 1rem;
 }
 
