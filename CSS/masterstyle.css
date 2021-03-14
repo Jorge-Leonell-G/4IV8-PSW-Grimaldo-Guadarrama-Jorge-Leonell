@@ -48,11 +48,6 @@ nav, section, footer{
 }
 
 /*Cambios para mi curriculum*/
-.cu-title{
-    width: 400px;
-    display: flex;
-    float: center;
-}
 
 .cu-container{
     border: 3px solid rgb(104, 14, 104);
