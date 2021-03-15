@@ -85,8 +85,17 @@ hr{
 
 i{
     font-size: 18px;
-    font-style: normal;
+    font-style: italic;
     color: rgb(95, 26, 47);
+}
+
+.recon-title{
+    font: 18px verdana italic;
+    color: rgb(0, 112, 56);
+}
+
+li{
+    margin-left: 1cm;
 }
 
 .primaria{
