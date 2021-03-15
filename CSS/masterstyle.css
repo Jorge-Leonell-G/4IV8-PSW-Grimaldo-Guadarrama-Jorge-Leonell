@@ -71,12 +71,12 @@ img{
 }
 
 .imagen{
-    display: flex;
-    width: 150px;
-    height: 150px;
-    justify-content: right;
-    align-items: center;
-    padding: 20px;
+    width: 200px;
+    height: 20px;
+    margin-left: 80%;
+    bottom: 100px;
+    right: 99px;
+    position: relative;
 }
 
 hr{
