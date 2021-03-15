@@ -48,7 +48,6 @@ nav, section, footer{
 }
 
 /*Cambios para mi curriculum*/
-
 .cu-container{
     border: 3px solid rgb(104, 14, 104);
     margin: 8rem;
@@ -65,6 +64,19 @@ nav, section, footer{
     text-align: left;
     box-sizing: border-box;
     animation: desplazar 4s ease-in-out infinite alternate;
+}
+
+img{
+    margin-left: 80%;
+}
+
+.imagen{
+    display: flex;
+    width: 150px;
+    height: 150px;
+    justify-content: right;
+    align-items: center;
+    padding: 20px;
 }
 
 hr{
