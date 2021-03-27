@@ -103,3 +103,11 @@ li{
     border-top: 1rem;
 }
 
+.creditos{
+    align-content: center;
+    padding: 3rem;
+    animation: desplazar 4s ease-in-out infinite alternate;
+    font-size: 22px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: italic;
+}
