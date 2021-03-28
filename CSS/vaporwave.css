@@ -1,0 +1,45 @@
+/*
+condicionales para mis animaciones
+*/
+@keyframes animacion_head{
+    from{
+        margin-left; 0: 
+    }
+    to{
+        margin-left: 85px;
+    }
+}
+
+
+*{
+    background-color: rgb(177, 128, 223);
+}
+
+
+header{
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    margin-bottom: 0;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, 
+    Verdana, sans-serif;
+    animation: animacion_head 2s alternate-reverse infinite;
+}
+
+.navegar{
+    font-size: 1rem;
+}
+
+.enlaces{
+    width: 80%;
+    display: inline-block;
+}
+
+li{
+    list-style: armenian;
+}
