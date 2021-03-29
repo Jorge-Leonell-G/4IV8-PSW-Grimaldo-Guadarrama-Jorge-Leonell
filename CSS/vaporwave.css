@@ -10,25 +10,49 @@ condicionales para mis animaciones
     }
 }
 
-
-*{
-    background-color: rgb(177, 128, 223);
+@keyframes desplazar_song{
+    from{
+        margin-left: 0;
+    }
+    to{
+        margin-left: 35vw;
+    }
 }
 
+*{
+    background-color: rgb(124, 62, 182);
+}
 
-header{
-    justify-content: center;
-    align-items: center;
+.palm-gif{
+    margin-left: 2vw;
+    width: 1200px;
+    height: 400px;
 }
 
 h1{
+    background: #dfd4bd;
+    background: radial-gradient(#df0b5c, rgb(35, 48, 163));
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, 
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 2rem;
+    /*Utilizaremos una webkit para el degradado del titulo :D*/
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    padding: 1rem;
     justify-content: center;
     align-items: center;
     padding: 1rem;
     margin-bottom: 0;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, 
     Verdana, sans-serif;
-    animation: animacion_head 2s alternate-reverse infinite;
+    animation: animacion_head 2s alternate infinite;
+}
+
+h4{
+    background: #92b87c;
+    border-radius: 5%;
+    font-size: 17px;
+    padding: 1rem;
 }
 
 .navegar{
@@ -42,4 +66,29 @@ h1{
 
 li{
     list-style: armenian;
+}
+
+.palms{
+    height: 690px;
+}
+
+.palm{
+    width: 750px;
+    height: 620px;
+}
+
+.castle{
+    height: 620px;
+}
+
+.song-title{
+    animation: desplazar_song 4s alternate infinite;
+}
+
+.i-song{
+    font-size: 20px;
+}
+
+.video{
+    margin-left: 20vw;
 }
