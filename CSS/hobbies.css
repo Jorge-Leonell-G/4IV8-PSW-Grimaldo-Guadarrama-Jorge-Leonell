@@ -1,3 +1,52 @@
+
+@keyframes animacion_hob{
+    from{
+        background-color: rgb(95, 10, 38);
+    }
+    to{
+        background-color: rgb(16, 82, 82);
+    }
+}
+
+@keyframes desplazar_song{
+    from{
+        margin-left: 0;
+    }
+    to{
+        margin-left: 35vw;
+    }
+}
+
+.main-container{
+    animation: animacion_hob 2s alternate-reverse infinite;
+}
+
+.title{
+    background: #d64c4c;
+    background: radial-gradient(#34b39d, rgb(78, 184, 68));
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, 
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 2rem;
+    /*Utilizaremos una webkit para el degradado del titulo :D*/
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+h2{
+    background: #d64c4c;
+    background: radial-gradient(#34b39d, rgb(78, 184, 68));
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, 
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 2rem;
+    /*Utilizaremos una webkit para el degradado del titulo :D*/
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+html, body{
+    animation: animacion_hob 2s alternate infinite;
+}
+
+
 .hob{
     padding-top: 50px;
     background-color: #29006b;
@@ -32,4 +81,16 @@
     transition: all 200ms ease-in;
     transform: scale(1.5);
 
+}
+
+i{
+    font-size: 50px;
+}
+
+.song-title{
+    animation: desplazar_song 4s alternate infinite;
+}
+
+.i-song{
+    font-size: 20px;
 }
