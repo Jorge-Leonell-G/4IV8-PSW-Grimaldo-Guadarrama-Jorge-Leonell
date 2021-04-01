@@ -22,6 +22,55 @@
     <br>
     <section>
         <h2>1</h2>
+        <br>
+         <form method="POST" name="formulario" >
+        <table align="center" border="1">
+            <tr>
+                <td class="td_sup">Ingrese su cantidad a invertir: $</td>
+                <td class="td_inf"> <input type="text" name="cantidad"
+                    onkeypress="return validarn(event)"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td class="td_inf"> <input type="button" value="interes" 
+                    name="enviar" onclick="interes()" > </td>
+            </tr>
+            <tr>
+                <td class="td_sup">Ingrese la cantidad de meses: </td>
+                <td class="td_inf"> <input list="meses" name="mes"
+                    onkeypress=""></td>
+                    <datalist id="meses">
+                        <option value="1">
+                        <option value="2">
+                        <option value="3">
+                        <option value="4">
+                        <option value="5">
+                        <option value="6">
+                        <option value="7">
+                        <option value="8">
+                        <option value="9">
+                        <option value="10">
+                        <option value="11">
+                        <option value="12">
+                    </datalist>
+                
+            </tr>
+            <tr>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="td_sup">Su saldo total con interés al 2% es: </td>
+                <td><input type="text" name="sueldoti" 
+                    id="cantidadi" readonly="readonly" 
+                    class="input_text" > </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="button" value="Borrar"
+                    name="delete" onclick="borrar()" ></td>
+            </tr>
+        </table>
+    </form>
 
         
     </section>
