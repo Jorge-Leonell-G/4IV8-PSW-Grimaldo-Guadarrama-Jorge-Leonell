@@ -10,18 +10,36 @@
     <script src="JS/problema03.js"></script>
 </head>
 <body>
-    <div>
+    <div class="main-container">
         <header>
             <h4 class="title-nombre">Por Jorge Leonell Grimaldo Guadarrama</h4>
         <h1 class="title-main" style="font-family: 'Roboto Condensed', sans-serif;">
             Bienvenido a la tienda "ReabasTCT"
         </h1>
     </header>
-
     <main>
         <form method="POST" name="compra" >
             <table align="center" border="1" > 
-                <tr><td>Bienvenido a la tienda </td></tr>
+                <tr><td>Por favor, ingrese su total de compra: $</td>
+                    <td class="td_inf"> <input type="text" name="costo"
+                        onkeypress="return validar(event)"></td>
+                </tr>
+                <tr>
+                    <td>Por favor presione el botón "Descontar" para conocer su total a pagar: </td>
+                    <td class="td_inf"> <input type="button" value="Descontar" 
+                        name="descuentos" onclick="descuento()"> </td>
+                </tr>
+                <tr>
+                    <td>Su cantidad final a pagar es de: $</td>
+                    <td><input type="text" name="comprati" 
+                        id="cantidadi" readonly="readonly" 
+                        class="input_text" > </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="button" value="Borrar"
+                        name="delete" onclick="borrar()" ></td>
+                </tr>
             </table>
         </form>
 
