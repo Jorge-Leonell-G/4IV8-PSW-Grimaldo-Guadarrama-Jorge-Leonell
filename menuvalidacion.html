@@ -8,13 +8,16 @@
     <link rel="stylesheet" href="./CSS/menuvalidacion.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Rubik:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="main-container">
         <header>
-            <section class="sect-nombre">
-                <h4>Por Jorge Leonell Grimaldo Guadarrama</h4>
-            </section>
+                <h4 class="title-nombre">Por Jorge Leonell Grimaldo Guadarrama</h4>
             <h1 class="title-main" style="font-family: 'Roboto Condensed', sans-serif;">
                 Problemas de validación con JS
             </h1>
@@ -24,55 +27,54 @@
                 <li><a href="index.html">Menú principal</a></li>
             </ul>
         </nav>
-        <section>
-            <h2>
+        <main class="content">
+            <h2 class="welcome">
                 Bienvenido
             </h2>
             <p>Aquí encontrará una lista de problemas validados en Javascript, 
                 cumpliendo con un correcto diseño en CSS3 acorde a las situaciones 
                 planteadas.
             </p>
-            <br>
             <p>Haga clic en los títulos de los artículos para acceder a 
                 los problemas con los que desea interactuar.
             </p>
-
+        </main>
+        <div class="articulos">
         <article>
             <header>
                 <hgroup>
-                    <h3><a href="problemasecuencia.html">Problemas secuenciales</a></h3>
+                    <h3>Problemas secuenciales</h3>
+                    <br>
                     <h4>Contenido:</h4>
                 </hgroup>
             </header>
             <hr>
+            <br>
             <ol>
-                <li>Un individuo desea invertir su capital en un banco y 
+                <li> <a href="problema01.html">Un individuo desea invertir su capital en un banco y 
                     desea saber cuánto dinero ganará después de un mes si el 
-                    banco paga a razón de 2% mensual.
+                    banco paga a razón de 2% mensual.</a>
                 </li>
                 <br>
-                <li>
-                    Un vendedor recibe un sueldo base más un 10% extra por 
-                    comisión de sus ventas, el vendedor desea saber cuánro dinero 
+                <li> <a href="problema02.html">Un vendedor recibe un sueldo base más un 10% extra por 
+                    comisión de sus ventas, el vendedor desea saber cuánto dinero 
                     obtendrá por concepto de comisiones por las tres ventas que 
                     realiza en el mes y el total que recibirá en el mes tomando 
-                    en cuenta su sueldo base y comisiones.
+                    en cuenta su sueldo base y comisiones.</a>
                 </li>
                 <br>
-                <li>
-                    Una tienda ofrece un descuento del 15% sobre el total de la 
+                <li> <a href="problema03.html">Una tienda ofrece un descuento del 15% sobre el total de la 
                     compra y un cliente desea saber cuánto deberá pagar finalmente 
-                    por su compra.
+                    por su compra.</a>
                 </li>
                 <br>
-                <li>
-                    Un alumno desea saber cuál será su calificación final en la materia 
+                <li> <a href="problema04.html">Un alumno desea saber cuál será su calificación final en la materia 
                     de Algoritmos. Dicha calificación se compone de los siguientes porcentajes:
                     <ul>
                         <li>55% del promedio de sus tres calificaciones parciales</li>
                         <li>30% de la calficación del exámen final.</li>
                         <li>15% de la calificación de un trabajo final</li>
-                    </ul>
+                    </ul></a>
                 </li>
                 <br>
                 <li>Un maestro desea saber qué porcentaje de hombres y qué porcentaje
@@ -82,16 +84,19 @@
                 <li>Realizar un algoritmo que calcule la edad de una persona</li>
             </ol>
         </article>
+        </div>
         <!--Parte 2 de los probelmas-->
+        <div>
         <article>
             <header>
                 <hgroup>
-                    <h3><a href="problemaselectivo.html">Problemas 
-                        selectivos compuestos</a></h3>
+                    <h3>Problemas selectivos compuestos</h3>
+                        <br>
                     <h4>Contenido:</h4>
                 </hgroup>
             </header>
             <hr>
+            <br>
             <ol>
                 <li>Leer dos números; si son iguales que los multiplique, 
                     si el primero es mayor que el segundo, que los reste, y 
@@ -126,7 +131,10 @@
                 </tr>
             </table>
         </article>
-    </section>
+     </div>
+     <footer class="foot-page">
+        <h3>sus</h3>
+     </footer>
     </div>
     
 </body>
