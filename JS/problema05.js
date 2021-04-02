@@ -33,7 +33,9 @@ function validarM(e){
     return patron.test(prueba)
 }
 
-function porcentajeH{
+
+
+function porcentajeH(){
     var valor = parseInt(document.alumnos.numalumnos.value);
     var valorH = parseInt(document.alumnos.numhombres.value);
     var valorM = parseInt(document.alumnos.nummujeres.value);
