@@ -4,7 +4,7 @@
 
 *{
     margin:0;
-    padding: 2mm;
+    padding: 0;
 }
 
 body{
@@ -12,13 +12,16 @@ body{
 }
 
 .main-container{
-    margin: 2rem;
-    background-color: #e2cccc
+    font-family: 'Rubik', sans-serif;
+    background-color: #e2cccc;
+    width: 90%;
+    max-width: 1200px;
+    margin: 15px auto;
+    display: grid;
 }
 
 
-.sect-nombre{
-    
+.title-nombre{
     padding: var(--rem);
     background-color: #17071b;
     color: #ffffff;
@@ -27,8 +30,19 @@ body{
     'Helvetica Neue', sans-serif;
 }
 
-.title-main, .navigate-main, h2{
+
+.title-main, .navigate-main, .welcome, p, .articulos, ol{
     padding: var(--rem);
 }
 
+a{
+    font-family: 'Oswald', sans-serif;
+}
 
+h4{
+    font-size: var(--rem);
+}
+
+hr{
+    color: #17071b;
+}
