@@ -18,46 +18,54 @@
             Consulta de calificaciones de la materia de <i>Algoritmo</i>
         </h1>
     </header>
+    <hr>
+    <br>
     <main>
-        <form method="POST" name="calificaciones" ></form>
-        <table align="center" border="1" >
-            <tr>
-                <td align="center"><b><u>Porcentaje del promedio de los tres parciales: 55%</u></b></td>
-            </tr>
-            <tr>
-                <td>Ingrese su calificación obtenida en el primer parcial: </td>
-                <td class="td_inf"> <input type="text" name="parcial1"
-                    onkeypress=""></td>
-            </tr>
-            <tr>
-                <td>Ahora ingrese su calificación obtenida en el segundo parcial: </td>
-                <td class="td_inf"> <input type="text" name="parcial2"
-                    onkeypress=""></td>
-            </tr>
-            <tr>
-                <td>Por último, ingrese su calificación obtenida en el tercer parcial: </td>
-                <td class="td_inf"> <input type="text" name="parcial3"
-                    onkeypress=""></td>
-            </tr>
-            <tr>
-                <td align="center"><b><u>Porcentaje del examen final: 30%</u></b></td>
-            </tr>
-            <tr>
-                <td>Ingrese su calificación obtenida en su exámen final: </td>
-                <td class="td_inf"> <input type="text" name="testfinal"
-                    onkeypress=""></td>
-            </tr>
-            <tr>
-                <td align="center"><b><u>Porcentaje del trabajo final: 15%</u></b></td>
-            </tr>
-            <tr>
-                <td>Ingrese su calificación obtenida en su trabajo final: </td>
-                <td class="td_inf"> <input type="text" name="testfinal"
-                    onkeypress=""></td>
-            </tr>
-        </table>
+        <form method="POST" name="calificaciones" >
+            <table align="center" border="1" >
+                <tr>
+                    <td align="center"><b><u>Porcentaje del promedio de los tres parciales: 55%</u></b></td>
+                </tr>
+                <tr>
+                    <td>Ingrese su calificación obtenida en el primer parcial: </td>
+                    <td class="td_inf"> <input type="text" name="par1"
+                        onkeypress="return validarn(event)"></td>
+                </tr>
+                <tr>
+                    <td>Ahora ingrese su calificación obtenida en el segundo parcial: </td>
+                    <td class="td_inf"> <input type="text" name="par2"
+                        onkeypress="return validarn(event)"></td>
+                </tr>
+                <tr>
+                    <td>Por último, ingrese su calificación obtenida en el tercer parcial: </td>
+                    <td class="td_inf"> <input type="text" name="par3"
+                        onkeypress="return validarn(event)"> </td>
+                </tr>
+                <tr>
+                    <td align="center"><b><u>Porcentaje del examen final: 30%</u></b></td>
+                </tr>
+                <tr>
+                    <td>Ingrese su calificación obtenida en su exámen final: </td>
+                    <td class="td_inf"> <input type="text" name="testfinal"
+                        onkeypress="return validarn(event)"></td>
+                </tr>
+                <tr>
+                    <td align="center"><b><u>Porcentaje del trabajo final: 15%</u></b></td>
+                </tr>
+                <tr>
+                    <td>Ingrese su calificación obtenida en su trabajo final: </td>
+                    <td class="td_inf"> <input type="text" name="trabajofinal"
+                        onkeypress="return validarn(event)"></td>
+                </tr>
+            </table>
+        <br>
+        <input class="boton-calculo" type="button" value="Promediar" name="calculo" onclick="">
+        <br><br>
+        <input class="boton-borrar" type="button" value="Borrar" name="delete" onclick="borrar()">
+        </form>
+        <br><br>
+        <a href="menuvalidacion.html">Regresar al menu de validación</a>
     </main>
-
     </div>
 </body>
 </html>
