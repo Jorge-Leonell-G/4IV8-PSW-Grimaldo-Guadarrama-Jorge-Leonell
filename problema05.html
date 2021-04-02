@@ -22,38 +22,23 @@
     <br>
     <main>
         <form method="POST" name="alumnos" >
-            <h5>Ingrese la cantidad de alumnos que hay en su grupo:</h5>
-            <br>
-            <input type="text" name="numalumnos" onkeypress="return validarAlumnos(event)" >
-            <br><br>
-            <h5>Ahora ingrese la cantidad <u>numérica</u> de hombres que hay en su grupo:</h5>
-            <br>
-            <input type="text" name="numhombres" onkeypress="return validarH(event)" >
-            <br><br>
-            <h5>Por último, ingrese la cantidad, de igual forma <u>numérica</u> de mujeres en su grupo</h5>
-            <br>
-            <input type="text" name="nummujeres" onkeypress="return validarM(event)" >
-            <br><br>
-            <input type="button" value="Calcular Porcentaje" name="calcper" onclick="porcentaje()" >
-            <br><br>
             <table>
                 <tr>
-                    <td>El porcentaje de hombres en el grupo es de: </td>
-                    <td><input type="text" name="porcentajeH" 
-                        id="porcentajeHom" readonly="readonly" 
-                        class="input_text"  > </td>
+                    <td>Ingrese la cantidad de alumnos que hay en su grupo: </td>
+                    <td><input type="text" name="numalumnos" onkeypress="return validarAlumnos(event)"> </td>
                 </tr>
                 <tr>
-                    <td></td>
-                    <td><input type="text" name="porcentajeM" 
-                        id="porcentajeMuj" readonly="readonly" 
-                        class="input_text"  > </td>
+                    <td>Ahora, ingrese la cantidad <u>numérica</u> de hombres que hay su grupo: </td>
+                    <td><input type="text" name="numhombres" id="" onkeypress="return validarH(event)"> </td>
+                </tr>
+                <tr>
+                    <td>Por último, ingrese de igual forma, la cantidad <u>numérica</u> de mujeres 
+                        que hay en su grupo:  </td>
+                        <td> <input type="text" name="nummujeres" onkeypress="return validarM(event)"> </td>
                 </tr>
             </table>
         </form>
     </main>
-
     </div>
-    
 </body>
 </html>
