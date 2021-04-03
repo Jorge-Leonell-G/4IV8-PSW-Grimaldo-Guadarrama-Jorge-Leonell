@@ -19,25 +19,38 @@
         </h1>
     </header>
     <hr>
-    <br>
     <main>
         <form method="POST" name="alumnos" >
-            <table>
+            <table align="center" border="1">
                 <tr>
                     <td>Ingrese la cantidad de alumnos que hay en su grupo: </td>
                     <td><input type="text" name="numalumnos" onkeypress="return validarAlumnos(event)"> </td>
                 </tr>
+                <br>
                 <tr>
                     <td>Ahora, ingrese la cantidad <u>numérica</u> de hombres que hay su grupo: </td>
                     <td><input type="text" name="numhombres" id="" onkeypress="return validarH(event)"> </td>
                 </tr>
+                <br>
                 <tr>
                     <td>Por último, ingrese de igual forma, la cantidad <u>numérica</u> de mujeres 
                         que hay en su grupo:  </td>
                         <td> <input type="text" name="nummujeres" onkeypress="return validarM(event)"> </td>
                 </tr>
             </table>
+            <p>Presione el botón "Calcular Porcentaje" para poder visualizar sus resultados</p>
+            <input type="button" value="Calcular Porcentaje" name="percentageC" onclick="porcentajeCalcular()">
+            <br><br>
+            <p>El porcentaje de hombres es: </p>
+            <input type="text" name="porcentajeH" readonly="readonly" class="input_result">
+            <br><br>
+            <p>El porcentaje de mujeres es: </p>
+            <input type="text" name="porcentajeM" readonly="readonly" class="input_result">
+            <br><br>
+            <input type="button" value="Borrar" name="delete" onclick="borrar()"> 
         </form>
+        <br>
+        <a href="menuvalidacion.html">Regresar al menu de validación</a>
     </main>
     </div>
 </body>
