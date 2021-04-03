@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/problemas.css">
+    <link rel="stylesheet" href="CSS/menuvalidacion.css">
+    <script src="JS/problema06.js"></script>
+</head>
+<body>
+    <div class="main-container">
+        <header>
+            <h4 class="title-nombre">Por Jorge Leonell Grimaldo Guadarrama</h4>
+        <h1 class="title-main" style="font-family: 'Roboto Condensed', sans-serif;">
+            Cálculo de <i>edad</i>
+        </h1>
+    </header>
+    <hr>
+    <br>
+    <main>
+        <form method="POST" name="edad">
+            <h4>Ingrese el año actual: </h4>
+            <br>
+            <input type="text" name="actual" onkeypress="return validar(event)">
+            <br><br>
+            <h4>Ahora ingrese su año de nacimiento: </h4>
+            <br>
+            <input type="text" name="nacimiento" onkeypress="return validar(event)">
+            <br><br>
+            <hr>
+            <br><br>
+            <input type="button" value="Calcular edad">
+            <h3>Su edad es de: 
+                <input type="text" name="edadT" readonly="readonly" class="input_result">
+            </h3>
+            <br><br>
+            <input type="button" value="Borrar" onclick="borrar()">
+        </form>
+        <br>
+        <a href="menuvalidacion.html">Regresar al menu de validación</a>
+    </main>
+    </div>
+</body>
+</html>
