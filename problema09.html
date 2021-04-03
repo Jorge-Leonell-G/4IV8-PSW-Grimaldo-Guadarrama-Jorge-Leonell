@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problema 9</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/problemas.css">
+    <link rel="stylesheet" href="CSS/menuvalidacion.css">
+    <script src="JS/problema09.js"></script>
+</head>
+<body>
+    <div class="main-container">
+        <header>
+            <h4 class="title-nombre">Por Jorge Leonell Grimaldo Guadarrama</h4>
+        <h1 class="title-main" style="font-family: 'Roboto Condensed', sans-serif;">
+            Cálculo de ganancias en <i>horas extras y normales</i>
+        </h1>
+    </header>
+    <hr>
+    <br>
+    <main>
+        <h2>Condiciones laborales situadas en el problema</h2>
+        <br>
+        <hr>
+        <br>
+        <h3>Si las horas de trabajo exceden a 40 hrs, el resto se consideran <u>horas extra</u></h3>
+        <br>
+        <h3>Éstas horas se pagan al doble de lo normal cuando no exceden de 8</h3>
+        <br>
+        <h3>Si se exceden éstas 8 horas, se pagan las primeras 8 al doble de lo que se pagan 
+            las horas normales y el resto al triple</h3>
+            <br><br>
+        <form method="POST" name="hora">
+            <h4>¡Bienvenido! Recuerde que debido a su puesto actual, su sueldo por hora es de: $200.00</h4>
+            <br>
+            <h4>Ingrese sus horas laboradas durante esta semana aquí: <input type="text" name="hrs" onkeypress="return validar(event)"> 
+            </h4>
+            <br><br>
+            <input type="button" value="Calcular" onclick="horasTotal()">
+            <br><br>
+            <h4>Su ganancia total es de: $<input type="text" name="horasT" readonly="readonly" class="input_result"> 
+            </h4>
+            <br>
+            <input type="button" value="Borrar" onclick="borrar()">
+
+        </form>
+        <br>
+        <a href="menuvalidacion.html">Regresar al menu de validación</a>
+    </main>
+    </div>
+</body>
+</html>

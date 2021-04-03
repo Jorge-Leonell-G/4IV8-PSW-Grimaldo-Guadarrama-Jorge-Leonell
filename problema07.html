@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página 7</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/problemas.css">
+    <link rel="stylesheet" href="CSS/menuvalidacion.css">
+    <script src="JS/problema07.js"></script>
+</head>
+<body>
+    <div class="main-container">
+        <header>
+            <h4 class="title-nombre">Por Jorge Leonell Grimaldo Guadarrama</h4>
+        <h1 class="title-main" style="font-family: 'Roboto Condensed', sans-serif;">
+            Lectura de dos <i>números junto con condiciones</i>
+        </h1>
+    </header>
+    <hr>
+    <br>
+    <main>
+        <h2>Bienvenido, para éste programa las condiciones que se manejan son:</h2>
+        <br>
+        <hr>
+        <br>
+        <ul>
+            <li>Si los dos números leídos son iguales, se multiplican</li>
+            <li>Si el primer número es mayor que el segundo, se restan</li>
+            <li>En caso contrario, los números se suman</li>
+        </ul>
+        <br><br>
+        <form method="POST" name="numeros" >
+            <h4>Ingrese su primer número (se admiten números enteros y flotantes): <input type="text" name="numero1" onkeypress="return validar(event)"> 
+            </h4>
+            <br>
+            <h4>Ingrese su segundo número: <input type="text" name="numero2" onkeypress="return validar(event)"> 
+            </h4>
+            <br><br>
+            <input type="button" value="Realizar Operación" onclick="calcular()">
+            <br><br>
+            <h4>El resultado de la operación efectuada entre los dos números es: <input type="text" name="resultado" readonly="readonly" class="input_result">
+            </h4>
+            <br><br>
+            <input type="button" value="Borrar" onclick="borrar()">
+
+        </form>
+        <br>
+        <a href="menuvalidacion.html">Regresar al menu de validación</a>
+    </main>
+    </div>
+</body>
+</html>
