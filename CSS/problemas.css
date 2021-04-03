@@ -7,6 +7,11 @@
     'Helvetica Neue', sans-serif;
 }
 
+.title-p{
+    padding: 0;
+    margin-top: 1rem;
+}
+
 .td_sup{
     align-items: left;
     width: 100;
@@ -26,6 +31,17 @@
     border-width: 2px;
     border-style: solid;
     color: #009900;
+    letter-spacing: 3px;
+    font-size: 16px;
+}
+
+.input_result{
+    align-items: center;
+    justify-content: center;
+    size: 12;
+    border-width: 2px;
+    border-style: solid;
+    color: #070707;
     letter-spacing: 3px;
     font-size: 16px;
 }
