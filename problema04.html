@@ -11,35 +11,35 @@
     <script src="JS/problema04.js"></script>
 </head>
 <body>
-    <div class="main-container" >
+    <div class="main-container">
         <header>
             <h4 class="title-nombre">Por Jorge Leonell Grimaldo Guadarrama</h4>
-        <h1 class="title-main" style="font-family: 'Roboto Condensed', sans-serif;">
-            Consulta de calificaciones de la materia de <i>Algoritmo</i>
-        </h1>
+            <h1 class="title-main" style="font-family: 'Roboto Condensed', sans-serif;">
+            Consulta de calificaciones de la asignatura de <i>Algoritmo</i>
+            </h1>
     </header>
     <hr>
     <br>
     <main>
         <form method="POST" name="calificaciones" >
-            <table align="center" border="1" >
+            <table align="center" border="1" > 
                 <tr>
-                    <td align="center"><b><u>Porcentaje del promedio de los tres parciales: 55%</u></b></td>
+                    <td><b><u>Porcentaje del promedio de los tres parciales: 55%</u></b></td>
                 </tr>
                 <tr>
-                    <td>Ingrese su calificación obtenida en el primer parcial: </td>
-                    <td class="td_inf"> <input type="text" name="par1"
-                        onkeypress="return validarn(event)"></td>
+                    <td>Ingrese su nota obtenida en el primer parcial: </td>
+                    <td class="td_inf"> 
+                        <input type="text" name="parcial1" onkeypress="return validarNota(event)"> </td>
                 </tr>
                 <tr>
-                    <td>Ahora ingrese su calificación obtenida en el segundo parcial: </td>
-                    <td class="td_inf"> <input type="text" name="par2"
-                        onkeypress="return validarn(event)"></td>
+                    <td>Ahora ingrese su nota obtenida en el segundo parcial: </td>
+                    <td class="td_inf"> 
+                        <input type="text" name="parcial2" onkeypress="return validarNota(event)"></td>
                 </tr>
                 <tr>
-                    <td>Por último, ingrese su calificación obtenida en el tercer parcial: </td>
-                    <td class="td_inf"> <input type="text" name="par3"
-                        onkeypress="return validarn(event)"> </td>
+                    <td>Por último, ingrese su nota obtenida en el tercer parcial: </td>
+                    <td class="td_inf"> 
+                        <input type="text" name="parcial3" onkeypress="return validarNota(event)"> </td>
                 </tr>
                 <tr>
                     <td align="center"><b><u>Porcentaje del examen final: 30%</u></b></td>
@@ -47,7 +47,7 @@
                 <tr>
                     <td>Ingrese su calificación obtenida en su exámen final: </td>
                     <td class="td_inf"> <input type="text" name="testfinal"
-                        onkeypress="return validarn(event)"></td>
+                        onkeypress="return validarNota(event)"></td>
                 </tr>
                 <tr>
                     <td align="center"><b><u>Porcentaje del trabajo final: 15%</u></b></td>
@@ -55,15 +55,17 @@
                 <tr>
                     <td>Ingrese su calificación obtenida en su trabajo final: </td>
                     <td class="td_inf"> <input type="text" name="trabajofinal"
-                        onkeypress="return validarn(event)"></td>
+                        onkeypress="return validarNota(event)"></td>
                 </tr>
             </table>
-        <br>
-        <input class="boton-calculo" type="button" value="Promediar" name="calculo" onclick="">
-        <br><br>
-        <input class="boton-borrar" type="button" value="Borrar" name="delete" onclick="borrar()">
+            <br>
+            <input class="boton-calculo" type="button" value="Promediar" name="calculo" onclick="calificacionFinal()">
+            <br><br>
+            <h4>Su nota final es un: <input type="text" name="total" readonly="readonly" class="input_result"> 
+            </h4>
+            <input class="boton-borrar" type="button" value="Borrar" name="delete" onclick="borrar()">
         </form>
-        <br><br>
+        <br>
         <a href="menuvalidacion.html">Regresar al menu de validación</a>
     </main>
     </div>

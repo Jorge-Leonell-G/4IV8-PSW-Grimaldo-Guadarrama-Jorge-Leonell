@@ -5,8 +5,75 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Problema 2</title>
+    <link rel="stylesheet" href="CSS/problemas.css">
+    <link rel="stylesheet" href="CSS/menuvalidacion.css">
+    <script src="JS/problema02.js"></script>
 </head>
 <body>
-    
+    <div class="main-container">
+        <header>
+            <h4 class="title-nombre">Por Jorge Leonell Grimaldo Guadarrama</h4>
+        <h1 class="title-main" style="font-family: 'Roboto Condensed', sans-serif;">
+             Programa de cálculo de <i>comisiones</i>
+        </h1>
+    </header>
+    <hr>
+    <br>
+    <main>
+        <form method="POST" name="comisiones">
+            <h4>Elija su puesto ingresando un número en base a la tabla para tener acceso a un sueldo base: </h4>
+            <br>
+            <table align="center" border="1">
+                <tr>
+                    <td>1.- Vendedor con experiencia de 1 semana</td>
+                    <td>Sueldo base: <b>$500.00</b></td>
+                </tr>
+                <tr>
+                    <td>2.- Vendedor con experiencia de 1 mes</td>
+                    <td>Sueldo base: <b>$800.00</b></td>
+                </tr>
+                <tr>
+                    <td>3.- Vendedor con experiencia de 6 meses o más</td>
+                    <td>Sueldo base: <b>$1200.00</b></td>
+                </tr>
+            </table>
+            <br>
+            <input type="text" name="opcion" onkeypress="return validar(event)">
+            <br><br>
+            <hr>
+            <br><br>
+            <h4>Ahora ingrese sus ganancias recibidas durante sus tres ventas que ha realizado durante el mes: </h4>
+            <br>
+            <p>Venta 1</p>
+            <input type="text" name="venta1" onkeypress="return validarVenta(event)">
+            <p>Venta 2</p>
+            <input type="text" name="venta2" onkeypress="return validarVenta(event)">
+            <p>Venta 3</p>
+            <input type="text" name="venta3" onkeypress="return validarVenta(event)">
+            <br><br>
+            <h4>Cuando esté listo, presione el botón de abajo para poder visualizar sus ganancias
+            </h4>
+            <br><br>
+            <input type="button" value="Hecho!" onclick="comision()">
+            <br><br>
+            <hr>
+            <br><br>
+            <table>
+                <tr>
+                    <td>Su ganacia por concepto de comisiones es de: $</td>
+                    <td><input type="text" name="result" readonly="readonly" class="input_result"></td>
+                </tr>
+                <tr>
+                    <td>Su ganancia por concepto de comisiones <u>más</u> su sueldo base es de: $</td>
+                    <td><input type="text" name="resultplus" readonly="readonly" class="input_result"></td>
+                </tr>
+            </table>
+            <br><br>
+            <input type="button" value="Borrar" onclick="borrar()">
+        </form>
+        <br>
+        <a href="menuvalidacion.html">Regresar al menu de validación</a>
+    </main>
+    </div>
 </body>
 </html>
