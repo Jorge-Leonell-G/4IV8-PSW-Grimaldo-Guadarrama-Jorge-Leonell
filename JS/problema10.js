@@ -33,3 +33,61 @@ Calcular la utilidad que un trabajador recibe
                 </li>
             </ol>
 */
+
+function validar(e){
+    var teclado = (document.all)?e.keyCode:e.which
+    if(teclado == 8)return true;
+
+    var patron = /[0-9\d]/;
+
+    var prueba = String.fromCharCode(teclado);
+    return patron.test(prueba)
+}
+
+
+function utilidad(){
+    //variables globales que funcionaran a lo largo de todo el switch
+    var p = parseInt(document.utilidad.opcionU.value);
+    var sueldo = 900.00;
+//condicional switch
+    switch (p){
+        case 1:
+            //Aqui designaremos las operaciones acorde a cada opcion
+            sueldo1 = sueldo * 0.05;
+            total = sueldo + sueldo1;
+            document.utilidad.reparto.value = "$"+total;
+            break;
+        case 2:
+            sueldo2 = sueldo * 0.07;
+            total = sueldo + sueldo2;
+            document.utilidad.reparto.value = "$"+total;
+            break;
+        case 3:
+            sueldo3 = sueldo * 0.10;
+            total = sueldo + sueldo3;
+            document.utilidad.reparto.value = "$"+total;
+            break;
+        case 4:
+            sueldo4 = sueldo * 0.15;
+            total = sueldo + sueldo4;
+            document.utilidad.reparto.value = "$"+total;
+            break;
+        case 5:
+            sueldo5 = sueldo * 0.20;
+            total = sueldo + sueldo5;
+            document.utilidad.reparto.value = "$"+total;
+            break;
+        default:
+            alert("Ingrese un número válido acorde a la tabla");
+            document.utilidad.opcionU.value = "";
+            document.utilidad.reparto.value = "";
+            break; 
+    }
+    alert("Ingrese un número válido acorde a la tabla");
+}
+
+
+function borrar(){
+    document.utilidad.opcionU.value = "";
+    document.utilidad.reparto.value = "";
+}
