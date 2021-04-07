@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Problema 10</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/problemas.css">
+    <link rel="stylesheet" href="CSS/menuvalidacion.css">
+    <script src="JS/problema10.js"></script>
 </head>
 <body>
     <div class="main-container">
@@ -17,11 +21,52 @@
         <hr>
         <br>
         <main>
-            <h4>Bienvenido, por favor seleccione su puesto en base a su antiguedad 
-                en la empresa para poder iniciar: </h4>
+            <h3>Bienvenido, por favor seleccione su puesto en base a su antiguedad 
+                en la empresa para poder iniciar: </h3>
+                <br><br>
+                <h4>Recordatorio amigable: Recuerde que usted se encuentra en semana de pruebas dentro de esta empresa, 
+                     así que por el momento, tiene un sueldo mensual de: $900.00</h4>
+                <br><hr><br>
+                <table align="center" border="1">
+                    <tr>
+                        <td>Tiempo</td>
+                        <td>Utilidad</td>
+                    </tr>
+                    <tr>
+                        <td>1.- Menos de 1 año</td>
+                        <td>5% del salario</td>
+                    </tr>
+                    <tr>
+                        <td>2.- 1 año o más y menos de 2 años</td>
+                        <td>7% del salario</td>
+                    </tr>
+                    <tr>
+                        <td>3.- 2 años o más y menos de 5 años</td>
+                        <td>10% del salario</td>
+                    </tr>
+                    <tr>
+                        <td>4.- 5 años o más y menos de 10 años</td>
+                        <td>15% del salario</td>
+                    </tr>
+                    <tr>
+                        <td>5.- 10 años o más</td>
+                        <td>20% del salario</td>
+                    </tr>
+                </table>
+                <br>
             <form method="POST" name="utilidad">
-
+                <h4>Ingrese su número aquí: <input type="text" name="opcionU" onkeypress="return validar(event)"> 
+                </h4>
+                <br>
+                <input type="button" value="Calcular" onclick="utilidad()">
+                <br><br>
+                <h4>Su reparto anual de utilidades es de: <input type="text" name="reparto" readonly="readonly" 
+                    class="input_result" > </h4>
+                    <br>
+                    <input type="button" value="Borrar" onclick="borrar()">
             </form>
+            <br>
+        <a href="menuvalidacion.html">Regresar al menu de validación</a>
         </main>
 
     </div>
