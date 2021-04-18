@@ -154,7 +154,8 @@
             <div class="problema-content" >
                 <input type="text" class="problema-input" 
                 placeholder="Ingresa las palabras separadas por 
-                una coma, no se aceptan espacios" id="p3-input" >
+                una coma, no se aceptan espacios" id="p3-input" onkeypress="return validar(event)" 
+                onKeyUP="this.value=this.value.toUpperCase();" required>
                 <button type="button" class="problema-button" 
                 style="margin-top: 1rem;" onclick="problema3()" >Calcular</button>
                 <pre class="problema-output" id="p3-output"  >
@@ -164,6 +165,7 @@
         </div>
     </div>
 
+    <center><a href="index.html"><h1>Regresar al menú principal</h1></a></center>
 
 </body>
 </html>

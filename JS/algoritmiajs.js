@@ -62,6 +62,76 @@ function problema2(){
     'Producto Escalar Minimo : '+ p2_producto;
 }
 
+/*
 function problema3(){
     //tarea aaaaaaa
+    //Bien, comenzemos utilizando querySelector
+    let car = document.querySelector('#p3-input').value;
+    //breve definicion de split
+    let word = car.split(",");
+    let large = " ";
+
+    for(let p of word){
+        if(p.length > large.length){
+            large = p;
+
+            var p_num = large.split("");
+            var num = p_num.length;
+        }
+    }
+    //document.querySelector('#p3-output').textContent = 'La palabra con más caracteres es: ' + large + ' ' + num + ' (' + car + ')' ;
+    document.querySelector('#p3-output').textContent = 'La palabra con más caracteres es : '+
+    large + 'Número de caracteres en la palabra: ' + num;
 }
+*/
+
+
+function problema3(){
+    //Comenzamos añadiendo un querySelector para obtener el valor de nuestro id
+    let car = document.querySelector('#p3-input').value;
+    //definimos que simbolo va entre el espaciado de cada caracter
+    let space = car.split(",");
+    let resultadoP = " ";
+
+    //ciclo for por cada palabra de nuestro espaciado
+    for(let word of space){
+        if(word.length > resultadoP.length){
+        resultadoP = word;
+        //creamos a p, que define la palabra final sin comas después de cada caracter
+        var p = resultadoP.split("");
+        //le asignamos su largo a la variable num
+        var num = p.length;
+        //variable que define la palabra mayor escrita en mayusculas
+        var resultadoPM = resultadoP.toUpperCase();
+        }
+    }
+    //imprimimos el resultado (output)
+    document.querySelector('#p3-output').textContent = 
+    'La palabra con más caracteres es: ' + resultadoPM + 
+    ' = '  + num +' ('+ p + ')';
+}
+
+
+//Funcion para la validacion de datos ingresados
+function validar(e){
+    key = e.keyCode || e.which;
+    tecla = String.fromCharCode(key).toString();
+    //incluimos coma, el abecedario en mayúsculas y con acentos
+    letras = ",ABCDEFGHIJKLMNOPQRSTUVWXYZÁÉÍÓÚabcdefghijklmnopqrstuvwxyzáéíóú";
+    
+    //expresion regular para las teclas especiales
+    spec = [8,13];
+    tecla_spec = false
+    for(var i in spec) {
+        if(key == spec[i]){
+        tecla_spec = true;
+        break;
+    }
+}
+
+    if(letras.indexOf(tecla) == -1 && !tecla_spec){
+        alert("Nope, no vayas por esas teclas :)\nSólo está permitido el uso de MAYÚSCULAS y comas :)");
+        return false;
+    }
+}
+
