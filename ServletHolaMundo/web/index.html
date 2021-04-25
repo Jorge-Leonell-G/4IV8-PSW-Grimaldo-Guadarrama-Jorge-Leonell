@@ -35,11 +35,30 @@ and open the template in the editor.
                 <input type="reset" value="Borrar Registro">
             </form>
             </div>
-            
+            <br>
             <div class="containerConsulta" >
-                <label>Consultar tabla de usuarios</label>
+                <br>      
+                <form method="get" name="consultarregistro" action="Consultar">
+                    <input type="submit" value="Consultar Tabla de Usuarios" >
+                </form>
             </div>
-            
+            <br>
+            <div class="containerEliminar" >
+                <br>
+                <form method="post" name="formularioeliminar" action="Eliminar">
+                    <label>ID del Usuario a Eliminar</label>
+                    <input type="number" name="ideliminar" >
+                    <br>
+                    <input type="submit" value="Eliminar Usuario" >
+                </form>
+            </div>
+            <br>
+            <div class="containerActualizar" >
+                <h1>Tarea wiiin´t agregar la css y js correspondiente a los formularios</h1>
+                <br>
+                <h1>Agregar la funcionalidad de agregar una actualización a los datos
+                nombre, appat, apmat, edad, correo</h1>
+            </div>
             
         </div>
     </body>
