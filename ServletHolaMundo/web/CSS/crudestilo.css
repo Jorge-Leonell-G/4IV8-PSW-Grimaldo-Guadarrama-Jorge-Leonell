@@ -1,0 +1,44 @@
+*{
+  margin: 0;
+  padding: 0;  
+}
+
+body{
+    background-color: #323a46;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+header{
+    background: #b1210b;
+    margin: 20px 0;
+}
+header h1{
+    color:#fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.container{
+    background-color: rgb(203, 207, 179);
+    margin:0 auto;
+    margin-top: 5%;
+    width: 80%;
+    max-width: 1200px;
+    overflow: hidden;
+}
+.containerRegistro{
+    background-color: rgb(174, 224, 216);
+    width: 70%;
+    min-width: 600px;
+}
+
+.labelData{
+    margin: 1rem;
+}
+
+#email-input{
+    margin: 12px 0;
+}
+
+.botones{
+}

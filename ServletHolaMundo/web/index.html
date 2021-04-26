@@ -9,30 +9,34 @@ and open the template in the editor.
         <title>Registro de usuarios</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./CSS/crudestilo.css">
+        
     </head>
     <body>
         <div class="container" >
-            
+            <header>
+                <h1>CRUD 4IV8 PSW</h1>
+            </header>
             <div  class="containerRegistro" >
                 <form name="formulario" method="post" 
                   action="Registro">
-                <label>Nombre:</label>
+                <label class="labelData" >Nombre:</label>
                 <input type="text" name="nombre" >
                 <br>
-                <label>Apellido Paterno:</label>
+                <label class="labelData">Apellido Paterno:</label>
                 <input type="text" name="appat">
                 <br>
-                <label>Apellido Materno:</label>
+                <label class="labelData">Apellido Materno:</label>
                 <input type="text" name="apmat">
                 <br>
-                <label>Edad:</label>
-                <input type="number" name="edad" min="01" max="99" size="2" >
+                <label class="labelData">Edad:</label>
+                <input type="number" name="edad" min="01" max="99" size="2" onkeypress="return validarNumero(event)" >
                 <br>
-                <label>Correo:</label>
-                <input type="text" name="correo" >
-                <br>
-                <input type="submit" value="Registro de Usuarios">
-                <input type="reset" value="Borrar Registro">
+                <label class="labelData" id="email-label" >Correo:</label>
+                <input type="text" name="correo" id="email-input" onkeypress="return validarCorreo(event)" >
+                <br><br>
+                <input class="botones" type="submit" value="Registro de Usuarios" >
+                <input class="botones" type="reset" value="Borrar Registro" >
             </form>
             </div>
             <br>
@@ -54,10 +58,9 @@ and open the template in the editor.
             </div>
             <br>
             <div class="containerActualizar" >
-                <h1>Tarea wiiin´t agregar la css y js correspondiente a los formularios</h1>
+                <h1></h1>
                 <br>
-                <h1>Agregar la funcionalidad de agregar una actualización a los datos
-                nombre, appat, apmat, edad, correo</h1>
+                <h1></h1>
             </div>
             
         </div>
