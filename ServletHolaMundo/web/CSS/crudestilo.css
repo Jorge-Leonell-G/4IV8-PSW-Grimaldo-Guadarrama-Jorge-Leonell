@@ -28,12 +28,23 @@ header h1{
 }
 .containerRegistro{
     background-color: rgb(174, 224, 216);
-    width: 70%;
+    width: 80%;
     min-width: 600px;
+    padding: 20px;
+    float: left;
+    box-sizing: border-box;
+}
+
+aside{
+    width: 20%;
+    box-sizing: border-box;
+    background: #ccc;
+    float: right;
 }
 
 .labelData{
-    margin: 1rem;
+    margin-left: 1rem;
+    margin-top: 1rem;
 }
 
 #email-input{
@@ -41,4 +52,6 @@ header h1{
 }
 
 .botones{
+    margin: 1rem;
+    width: 50%;
 }

@@ -34,11 +34,18 @@ and open the template in the editor.
                 <br>
                 <label class="labelData" id="email-label" >Correo:</label>
                 <input type="text" name="correo" id="email-input" onkeypress="return validarCorreo(event)" >
-                <br><br>
-                <input class="botones" type="submit" value="Registro de Usuarios" >
-                <input class="botones" type="reset" value="Borrar Registro" >
+                <br>
+                <div class="botones" >
+                <input type="submit" value="Registro de Usuarios" >
+                <input type="reset" value="Borrar Registro" >
+                </div>
             </form>
             </div>
+            <br>
+            <!--div para un aside en donde mostraremos enlaces-->
+            <aside class="aside-enlaces" >
+                <h5><a href="./">Enlace al menú principal</a></h5>
+            </aside>
             <br>
             <div class="containerConsulta" >
                 <br>      
@@ -52,7 +59,7 @@ and open the template in the editor.
                 <form method="post" name="formularioeliminar" action="Eliminar">
                     <label>ID del Usuario a Eliminar</label>
                     <input type="number" name="ideliminar" >
-                    <br>
+                    <br><br>
                     <input type="submit" value="Eliminar Usuario" >
                 </form>
             </div>
