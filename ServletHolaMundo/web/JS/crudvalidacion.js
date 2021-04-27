@@ -21,3 +21,11 @@ function validarCorreo(e){
     var prueba = String.fromCharCode(teclado);
     return email.test(prueba)
 }
+
+function validarAlertas(){
+    dnom = //bla bla code code
+    dappat = document.formulario.appat.value;
+    dapmat = document.formulario.apmat.value;
+    dedad = parseInt(document.formulario.edad.value);
+
+}

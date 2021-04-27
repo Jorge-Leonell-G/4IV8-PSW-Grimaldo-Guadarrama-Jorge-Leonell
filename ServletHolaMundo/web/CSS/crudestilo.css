@@ -20,19 +20,24 @@ header h1{
 
 .container{
     background-color: rgb(203, 207, 179);
+    padding: 1rem;
     margin:0 auto;
     margin-top: 5%;
     width: 80%;
     max-width: 1200px;
     overflow: hidden;
 }
-.containerRegistro{
+.container containerRegistro{
     background-color: rgb(174, 224, 216);
     width: 80%;
     min-width: 600px;
-    padding: 20px;
     float: left;
     box-sizing: border-box;
+}
+
+.div-datos{
+    display: grid;
+    grid-template-columns: 50% 50%;
 }
 
 aside{
@@ -40,11 +45,6 @@ aside{
     box-sizing: border-box;
     background: #ccc;
     float: right;
-}
-
-.labelData{
-    margin-left: 1rem;
-    margin-top: 1rem;
 }
 
 #email-input{
