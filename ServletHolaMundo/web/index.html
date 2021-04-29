@@ -13,46 +13,42 @@ and open the template in the editor.
         <script src="./JS/crudvalidacion.js"></script>
     </head>
     <body>
-        <div class="container" >
+       <div class="container" >
             <header>
                 <h1>CRUD 4IV8 PSW</h1>
             </header>
-            <div  class="containerRegistro" >
-                <form name="formulario" method="post" 
-                  action="Registro">
-                <div class="div-datos" >
-                <label class="labelData" >Nombre:</label>
-                <input type="text" name="nombre" >
+           <div class="div-datos">
+                <form name="formulario" method="post" action="Registro">
+                <label>Nombre:</label>
+                <input type="text" name="nombre" onkeypress="return validarNombre(event)">
                 <br>
-                <label class="labelData">Apellido Paterno:</label>
-                <input type="text" name="appat">
+                <label >Apellido Paterno:</label>
+                <input type="text" name="appat"  onkeypress="return validarNombre(event)">
                 <br>
-                <label class="labelData">Apellido Materno:</label>
-                <input type="text" name="apmat">
+                <label >Apellido Materno:</label>
+                <input type="text" name="apmat"  onkeypress="return validarNombre(event)">
                 <br>
-                <label class="labelData">Edad:</label>
+                <label >Edad:</label>
                 <input type="number" name="edad" min="01" max="99" size="2" onkeypress="return validarNumero(event)" >
                 <br>
-                <label class="labelData" id="email-label" >Correo:</label>
+                <label >Correo:</label>
                 <input type="text" name="correo" id="email-input" onkeypress="return validarCorreo(event)" >
                 <br>
-                <div class="botones" >
                 <input type="submit" value="Registro de Usuarios" >
+                <br>
                 <input type="reset" value="Borrar Registro" >
-                </div>
-                </div>  
-            </div>
-            </form>
-            </div>
+                </form>
+            </div> 
             <br>
-            <!--div para un aside en donde mostraremos enlaces-->
+            <!--aside en donde mostraremos enlaces-->
             <aside class="aside-enlaces" >
-                <h5><a href="./">Enlace al menú principal</a></h5>
+                <h5><a href=".\index.html">Enlace al menú principal</a></h5>
             </aside>
             <br>
             <div class="containerConsulta" >
                 <br>      
                 <form method="get" name="consultarregistro" action="Consultar">
+                    <h3>Consulta</h3>
                     <input type="submit" value="Consultar Tabla de Usuarios" >
                 </form>
             </div>
@@ -60,6 +56,7 @@ and open the template in the editor.
             <div class="containerEliminar" >
                 <br>
                 <form method="post" name="formularioeliminar" action="Eliminar">
+                    <h3>Eliminar</h3>
                     <label>ID del Usuario a Eliminar</label>
                     <input type="number" name="ideliminar" >
                     <br><br>
@@ -68,11 +65,17 @@ and open the template in the editor.
             </div>
             <br>
             <div class="containerActualizar" >
-                <h1></h1>
                 <br>
+                <form method="post" name="formularioactualizar" action="Actualizar">
+                    <h3>Actualizar</h3>
+                    <label>ID del Usuario a Actualizar</label>
+                    <input type="number" name="ideliminar" >
+                    <br><br>
+                    <input type="submit" value="Actualizar Datos" >
+                </form>
                 <h1></h1>
             </div>
+    </div>
             
-        </div>
     </body>
 </html>
