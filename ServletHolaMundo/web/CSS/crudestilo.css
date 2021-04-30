@@ -4,13 +4,13 @@
 }
 
 body{
-    background-color: #104ba3;
+    background-color: #8a73be;
     font-family: 'Courier New', Courier, monospace;
     overflow-x: hidden;
 }
 
 header{
-    background: #af0303;
+    background: #660a04;
     margin: 20px 0;
 }
 
@@ -21,13 +21,18 @@ header h1{
 }
 
 
+.main-container{
+    display: flex;
+    flex-flow: row wrap;
+}
+
 .div-datos{
     min-height: 80vh;
     display: inline-flexbox;
     align-items: center;
     justify-content: center;
-    margin: auto;
     width: 20%;
+    margin: auto;
     padding: 10px;
 }
 
@@ -59,17 +64,11 @@ header h1{
     color: white;
     width: 90%;
     cursor: pointer;
-    background: rgb(133, 0, 0);
+    background: rgb(121, 21, 83);
     margin-top: 30px;
     border-radius: 50px;
 }
 
-aside{
-    width: 20%;
-    box-sizing: border-box;
-    background: #ccc;
-    float: right;
-}
 
 .containerConsulta{
     min-height: 80vh;
@@ -110,7 +109,7 @@ aside{
     color: white;
     width: 90%;
     cursor: pointer;
-    background: rgb(133, 0, 0);
+    background: rgb(121, 21, 83);
     margin-top: 30px;
     border-radius: 50px;
 }
@@ -159,7 +158,7 @@ aside{
     color: white;
     width: 90%;
     cursor: pointer;
-    background: rgb(133, 0, 0);
+    background: rgb(121, 21, 83);
     margin-top: 30px;
     border-radius: 50px;
 }
@@ -209,12 +208,13 @@ aside{
     color: white;
     width: 90%;
     cursor: pointer;
-    background: rgb(133, 0, 0);
+    background: rgb(121, 21, 83);
     margin-top: 30px;
     border-radius: 50px;
 }
 
 .containerActualizar form input[type="submit"]:hover {
+    border: 1px solid #1c767c;
     letter-spacing: 3px;
     transition: .3s ease;
 }

@@ -46,23 +46,38 @@ function validarAlertas(){
     dedad = parseInt(document.formulario.edad.value);
     dcorreo = document.formulario.correo.value;
 
-    if(dnom == " " && dappat == " " && dapmat == " "){
-        alert("Error: Por favor ingrese su nombre completo");
-        dnom = " ";
-        dappat = " ";
-        dapmat = " ";
+    if(dnom == ""){
+        alert("Error: Por favor ingrese su(s) nombre(s)");
+
+        return false;
     }else{
-        if(dnom == " "){
-            alert("Error: Por favor ingrese su(s) nombre(s)");
-        }else{
-            if(dappat == " "){
+        if(dappat == ""){
             alert("Error: Por favor ingrese su apellido paterno");
+
+            return false;
         }else{
-            if(dapmat == " "){
+            if(dapmat == ""){
                 alert("Error: Por favor ingrese su apellido materno");
+
+                return false;
+            }else{
+                if(dedad == ""){
+                    alert("Error: Por favor ingrese su edad");
+
+                    return false;
+                }else{
+                    if(dcorreo == ""){
+                        alert("Error: Por favor ingrese su email");
+
+                        return false;
+                    }else{
+                        alert("Datos correctamente validados");
+
+                        return true;
+                    }
+                }
             }
-         }
-       }
-     }
+        }
+    }
    }
   
