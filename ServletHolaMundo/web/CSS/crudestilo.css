@@ -20,12 +20,6 @@ header h1{
     text-align: center;
 }
 
-
-.main-container{
-    display: flex;
-    flex-flow: row wrap;
-}
-
 .div-datos{
     min-height: 80vh;
     display: inline-flexbox;

@@ -91,84 +91,7 @@ public class Actualizar extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-            
-            
-            String nom, appat, apmat, correo, ip, iph;
-            int edad, id_a;
-            
-            nom = request.getParameter("nom_n");   
-            appat = request.getParameter("appat_n");
-            apmat = request.getParameter("appmat_n");
-            correo = request.getParameter("correo_n");
-            
-            
-            id_a = Integer.parseInt(request.getParameter("idactualizar"));
-                        
-            edad = Integer.parseInt(request.getParameter("Edad_n"));
-            
-            try{
-                //creamos nuestra sentencia a ejecutar
-                String q = "UPDATE Mregistro"
-                        + "SET  (nom_usu, appat_usu, apmat_usu, edad_usu, correo_usu) "
-                        + "values ('"+nom+"', '"+appat+"', '"+apmat+"', "+edad+", '"+correo+"')"
-                        + "WHERE id_usu values "+id_a+" ";
-                
-                //ejecutar la sentencia
-                set.executeUpdate(q);
-                
-                System.out.println("Registro exitoso");
-              
-                
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet Registro</title>");            
-            out.println("</head>");
-            out.println("<body>"
-                    + "Su nombre es: " + nom);
-            out.println("<br>"
-                    + "Su apellido paterno es: " + appat
-                    + "<br>"
-                    + "Su apellido materno es: " + apmat
-                    + "<br>"
-                    + "Su edad es: " +edad
-                    + "<br>"
-                    + "Su correo electronico es:  "+correo);
-            out.println("<h1>Registro Exitoso</h1>"
-                    + "<a href='index.html'>Regresar a la pagina principal</a>"
-                    + "<br>"
-                    + "<a href='Consultar'>Consultar Tabla General de Usuarios</a>");
-            out.println("</body>");
-            out.println("</html>");
-                
-            }catch(Exception e){
-            
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet Actualizar</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Actualización NO Realizada, inténtelo de nuevo</h1>"
-                    + "<a href='index.html'>Regresar a la Página Principal</a>");
-            out.println("</body>");
-            out.println("</html>");
-            
-            System.out.println("Dato NO Actualizado en la tabla");
-            System.out.println(e.getMessage());
-            System.out.println(e.getStackTrace());
-            
-            }
-            
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet Actualizar</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet Actualizar at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
+
         }
     }
 
@@ -201,8 +124,62 @@ public class Actualizar extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
+            out.println("<!DOCTYPE html>");
+            out.println("<html>");
+            out.println("<head>");
+            out.println("<title>Servlet Actualizar</title>"
+             + "<link rel=\"stylesheet\" href=\"./CSS/crudestilo.css\">");       
+            out.println("</head>");
+            out.println("<body>"
+                    + "<h1>Actualización de Usuario</h1>");
+               
+            String nom, appat, apmat, correo;
+            int edad, id;            
+
+            nom = request.getParameter("nombre_act");   
+            appat = request.getParameter("appat_act");
+            apmat = request.getParameter("appmat_act");
+            correo = request.getParameter("correo_act");
+            id = Integer.parseInt(request.getParameter("idactualizar"));             
+            edad = Integer.parseInt(request.getParameter("edad_p"));
+            
+            try{
+
+               String q = "UPDATE mregistro "
+                        + "SET nom_usu = '"+nom+"', appat_usu = '"+appat+"', apmat_usu = '"+apmat+"', edad_usu = "+edad+", correo_usu = '"+correo+"' "
+                        + "WHERE id_usu ="+id+" ;";
+                
+
+                set.executeUpdate(q);
+                
+               out.println("Tu nombre actualizado es: " + nom
+                    + "<br>"
+                    + "Tu apellido paterno actualizado es: " + appat
+                    + "<br>"
+                    + "Tu apellido materno actualizado es: " + apmat
+                    + "<br>"
+                    + "Tu edad actualizada es: " +edad
+                    + "<br>"
+                    + "Tu correo electronico actualizado es:  "+correo);
+                out.println("<br>"
+                        + "<h1>Registro Exitoso</h1>"); 
+              
+            }catch(Exception e){
+                out.println("<h1>Usuario No Actulaizado</h1>");
+                System.out.println("No se pudo actualizar el usuario");
+                System.out.println(e.getMessage());
+                System.out.println(e.getStackTrace());
+             
+            }
+           
             
             
+            out.println("<br>"
+                    + "<a href='index.html'>Regresar a la pagina principal</a>"
+                    + "<br>"
+                    + "<a href='Consultar'>Consultar Tabla General de Usuarios</a>");
+            out.println("</body>");
+            out.println("</html>");  
         }
 
     }

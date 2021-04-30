@@ -47,7 +47,7 @@ function validarAlertas(){
     dcorreo = document.formulario.correo.value;
 
     if(dnom == ""){
-        alert("Error: Por favor ingrese su(s) nombre(s)");
+        alert("Error: Campo vacío");
 
         return false;
     }else{
@@ -71,6 +71,7 @@ function validarAlertas(){
 
                         return false;
                     }else{
+                        
                         alert("Datos correctamente validados");
 
                         return true;
@@ -78,6 +79,75 @@ function validarAlertas(){
                 }
             }
         }
-    }
+     }
    }
-  
+
+
+function validarAlertasElim(){
+    //variable extra para la fucnion de eliminar usuario
+    deliminar = parseInt(document.formularioeliminar.ideliminar.value);
+    if(deliminar == ""){
+        alert("Error: Por favor ingrese el ID del usuario a eliminar");
+        
+        return false;
+    }else{
+        return true;
+    }
+}
+
+
+function validarAlertasAct(){
+    //inclusión de la variable para el ID
+    idact = parseInt(document.formularioactualizar.idactualizar.value);
+    //demas variables del container del registro
+    dnom = document.formularioactualizar.nombre_act.value;
+    dappat = document.formularioactualizar.appat_act.value;
+    dapmat = document.formularioactualizar.apmat_act.value;
+    dedad = parseInt(document.formularioactualizar.edad_act.value);
+    dcorreo = document.formularioactualizar.correo_act.value;
+    
+    if(idact == ""){
+        alert("Error: Por favor ingrese el ID del usuario a actualizar");
+        
+        return false;
+    }else{
+        if(dnom == ""){
+        alert("Error: Campo vacío");
+
+        return false;
+    }else{
+        if(dappat == ""){
+            alert("Error: Por favor ingrese su apellido paterno");
+
+            return false;
+        }else{
+            if(dapmat == ""){
+                alert("Error: Por favor ingrese su apellido materno");
+
+                return false;
+            }else{
+                if(dedad == ""){
+                    alert("Error: Por favor ingrese su edad");
+
+                    return false;
+                }else{
+                    if(dcorreo == ""){
+                        alert("Error: Por favor ingrese su email");
+
+                        return false;
+       
+                    }else{
+                        return true;
+                    }
+                }
+            }
+          }
+      }
+    }
+  }
+
+
+
+
+
+
