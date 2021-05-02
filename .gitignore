@@ -1,3 +1,5 @@
 *.jpg
 /ServletHolaMundo/nbproject/private/
 /ServletHolaMundo/build/
+/JSPEjemplo/nbproject/private/
+/JSPEjemplo/build/
