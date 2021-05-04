@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Registro de Usuarios</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./CSS/registroestilo.css">
+    </head>
+    <body>
+        <script src="./JS/registrovalidacion.js" ></script>
+        <header class="main-title">
+            <h1>Gestión de Usuarios Cliente y Administrador (CRUD)</h1>
+        </header>
+    <main>
+        <div class="container" >
+            <div class="div-datos">
+                <form method="post" id="form" name="formulario" action="guardar.jsp" onsubmit="return validarAlertas(event)">
+                <h3>Registrar</h3>
+                <div class="container">
+                    <input type="text" name="nombre" placeholder="Nombre" required maxlength="35" onkeypress="return validarNombre(event)">
+                </div>
+                <div class="container">
+                    <input type="text" name="appat" placeholder="Apellido Paterno" required maxlength="20" onkeypress="return validarNombre(event)">
+                </div>
+                <div class="container">
+                    <input type="text" name="apmat" placeholder="Apellido Materno" required maxlength="20" onkeypress="return validarNombre(event)">
+                </div>
+                <div class="container">
+                    <input type="text" name="edad" placeholder="Edad" required maxlength="2" onkeypress="return validarNumero(event)">
+                </div>
+                <div class="container">
+                    <input type="date" name="fecha" onkeypress="return validarNumero(event)">
+                </div>
+                <div class="container">
+                    <input type="text" name="dom" placeholder="Domicilio" required maxlength="35" onkeypress="return validarDomicilio(event)">
+                </div>
+                <div class="container">
+                    <input type="text" name="telpart" placeholder="Tel. Particular" required maxlength="8" onkeypress="return validarNumero(event)">
+                </div>
+                <div class="container">
+                    <input type="text" name="telcel" placeholder="Tel.Celular" required maxlength="10" onkeypress="return validarNumero(event)">
+                </div>
+                <input type="submit" value="Registrar usuario" name="enviar" onclick="return validarAlertas()">
+                <br>
+                <input type="reset" value="Eliminar datos" name="eliminar" >
+            </form>
+            </div> 
+        </div>
+    </main>
+    </body>
+</html>
