@@ -28,7 +28,7 @@ function validarDomicilio(e){
     var teclado = (document.all)?e.keyCode:e.which
     if(teclado == 8)return true;
 
-    var domic = /^[a-zA-Z0-9_.+-]+[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]$/;
+    var domic = /^[a-zA-Z0-9_.+-]+[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
 
     var prueba = String.fromCharCode(teclado);
     return domic.test(prueba)

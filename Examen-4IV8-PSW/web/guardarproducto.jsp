@@ -21,9 +21,9 @@
         String url, username, password, driver;
         
                                     //nombre de la DATABASE
-        url = "jdbc:mysql://localhost/registroexamen";
-        username = "root";
-        password = "Shellframex731--";
+        url = "jdbc:mysql://us-cdbr-east-03.cleardb.com/heroku_7585192c80d48c9";
+        username = "ba1d4a0655e960";
+        password = "562e50e0";
         driver = "com.mysql.jdbc.Driver";
         
         try{
