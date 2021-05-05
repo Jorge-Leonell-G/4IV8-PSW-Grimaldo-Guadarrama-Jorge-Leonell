@@ -33,7 +33,7 @@
 
                     String url, username, password, driver;
 
-                    url = "jdbc:mysql://us-cdbr-east-03.cleardb.com/heroku_7585192c80d48c9";
+                    url = "jdbc:mysql://us-cdbr-east-03.cleardb.com:3306/heroku_7585192c80d48c9?serverTimezone=UTC";
                     username = "ba1d4a0655e960";
                     password = "562e50e0";
                     driver = "com.mysql.jdbc.Driver";
