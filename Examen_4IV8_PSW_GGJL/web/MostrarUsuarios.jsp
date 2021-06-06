@@ -52,7 +52,7 @@
                         <td><%=u.getCel_usuario()%></td>
                         <td><%=u.getPrivilegio_usuario()%></td>
                         <td> <a href="editarusuario.jsp?id=<%=u.getId_usuario()%>" >Editar</a> </td>
-                        <td> <a href="borrarempleado?id=<%=u.getId_usuario()%>" >Borrar</a> </td>
+                        <td> <a href="BorrarUsuario?id=<%=u.getId_usuario()%>" >Borrar</a> </td>
                     </tr>
                     <%
                     

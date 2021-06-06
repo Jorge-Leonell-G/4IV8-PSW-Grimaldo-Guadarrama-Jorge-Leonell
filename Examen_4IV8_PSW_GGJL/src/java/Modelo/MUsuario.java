@@ -43,7 +43,7 @@ public class MUsuario {
         try{
             con = Conexion.getConexion();
             String q = "SELECT * FROM MUsuario "
-                    + "WHERE user_usuario = ? AND pass_usuario = ?";
+                    + "WHERE user_usu = ? AND pass_usu = ?";
             ps = con.prepareStatement(q);
             
             ps.setString(1, user);

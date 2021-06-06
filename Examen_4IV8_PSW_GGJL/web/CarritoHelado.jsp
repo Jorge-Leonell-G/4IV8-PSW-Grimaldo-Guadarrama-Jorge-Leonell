@@ -4,6 +4,7 @@
     Author     : rash2
 --%>
 
+<%@page import="Modelo.MUsuario"%>
 <%@page import="Modelo.DCompra"%>
 <%@page import="Modelo.MProducto"%>
 <%@page import="java.util.Vector"%>
@@ -12,6 +13,13 @@
 <%
     String usuario = "";
     HttpSession sesionuok = request.getSession();
+    
+    //instancia de la clase MUsuario
+    MUsuario u = new MUsuario();
+    
+    //establecemos nuestro atributo
+    sesionuok.setAttribute("usuario", u.getNombre_usuario());
+    
     if(sesionuok.getAttribute("usuario")==null){
         
     %>
@@ -32,10 +40,11 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Carrito de Compras de Helados</title>
     </head>
     <body>
-        
+        <h1>¡Bienvenido <% out.println(sesionuok.getAttribute("usuario")); %>!</h1>
+        <br>
         <%
            //necesitamos obtener primero nuestro carro
             Vector<DCompra> vectorDetCompra = 

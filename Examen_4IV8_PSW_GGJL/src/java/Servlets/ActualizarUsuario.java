@@ -10,19 +10,16 @@ import Control.AccionesUsuario;
 import Modelo.MUsuario;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.Date;
-import java.util.Enumeration;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 /**
  *
  * @author rash2
  */
-public class GuardarUsuario extends HttpServlet {
+public class ActualizarUsuario extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -39,65 +36,28 @@ public class GuardarUsuario extends HttpServlet {
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
             
-            /*
-            Generar la sesión del usuario
-            */
-            
-            HttpSession sesionuok = request.getSession(true);
-            
-            //creacion de "cookie" (hashmap)
-            
-            Integer cuenta = (Integer)sesionuok.getAttribute("cuenta.ss");
-            
-            String idsesion = sesionuok.getId();
-            
-            long fechacreacion = sesionuok.getCreationTime();
-            
-            long fechaultimoacceso = sesionuok.getLastAccessedTime();
-            
-            //primera vez que se ingresa
-            if(cuenta == null){
-                cuenta = new Integer(1);
-            }else{
-                cuenta = new Integer(cuenta.intValue()+1);
-            }
-            
-            sesionuok.setAttribute("cuenta.ss", cuenta);
-            
-            //impresion de los valores de la sesion
-            System.out.println("ID de la sesión: " + idsesion);
-            System.out.println("Fecha de creación: " + new Date(fechacreacion).toString());
-            System.out.println("Fecha de último acceso: " + new Date(fechaultimoacceso).toString());
-            
-            //visualizacion de los parametros del hashmap
-            
-            Enumeration paramsesion = sesionuok.getAttributeNames();
-            
-            while(paramsesion.hasMoreElements()){
-                String parametros = (String)paramsesion.nextElement();
-                Object valor = sesionuok.getAttribute(parametros);
-                System.out.println("El parametro es: " + parametros 
-                + "Su valor es. " + valor.toString());
-            }
-            
+            //obtencion de parametros
             String nom, appat, apmat, fechanac, tel, cel, user, pass;
             int dir, formapago, privilegio;
             
-            nom = request.getParameter("txtNombre");
-            appat = request.getParameter("txtAppat");
-            apmat = request.getParameter("txtApmat");
-            dir = Integer.parseInt(request.getParameter("txtDir"));
-            fechanac = request.getParameter("txtFechanac");
-            tel = request.getParameter("txtTel");
-            cel = request.getParameter("txtCel");
-            formapago = Integer.parseInt(request.getParameter("txtFormapago"));
-            user = request.getParameter("txtUser");
-            pass = request.getParameter("txtPass");
-            privilegio = Integer.parseInt(request.getParameter("txtPrivilegio"));
+            int id =Integer.parseInt(request.getParameter("id2"));
             
-            //instancia del usuario
+            nom = request.getParameter("txtNombre2");
+            appat = request.getParameter("txtAppat2");
+            apmat = request.getParameter("txtApmat2");
+            dir = Integer.parseInt(request.getParameter("txtDir2"));
+            fechanac = request.getParameter("txtFechanac2");
+            tel = request.getParameter("txtTel2");
+            cel = request.getParameter("txtCel2");
+            formapago = Integer.parseInt(request.getParameter("txtFormapago2"));
+            user = request.getParameter("txtUser2");
+            pass = request.getParameter("txtPass2");
+            privilegio = Integer.parseInt(request.getParameter("txtPrivilegio2"));
+            
+            
             MUsuario u = new MUsuario();
             
+            u.setId_usuario(id);
             u.setNombre_usuario(nom);
             u.setAppat_usuario(appat);
             u.setApmat_usuario(apmat);
@@ -110,15 +70,13 @@ public class GuardarUsuario extends HttpServlet {
             u.setPass_usuario(pass);
             u.setPrivilegio_usuario(privilegio);
             
-            int status = AccionesUsuario.registrarUsuario(u);
+            int status = AccionesUsuario.actualizarUsuario(u);
             
             if(status > 0){
-                response.sendRedirect("registrousuarios.jsp");
+                response.sendRedirect("MostrarUsuarios.jsp");
             }else{
                 response.sendRedirect("error.jsp");
             }
-            
-            
         }
     }
 

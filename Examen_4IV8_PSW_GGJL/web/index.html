@@ -30,11 +30,81 @@ and open the template in the editor.
                                     id="txtPassword"> </td>
                     </tr>
                     <tr>
-                        <td> <input type="submit" value="Entrar" 
-                                    id="btnEntrar" > </td>
+                        <td colspan="2" > <input type="submit" value="Registrar"
+                                    id="btnEntrar"> </td>
                     </tr>
                 </table>
             </form>
+            <br>
+            <h1>Registro de Usuarios</h1>
+            <br>
+            <form method="post" action="GuardarUsuario" name="register" >
+                <table>
+                    <tr>
+                        <td>Nombre:</td>
+                        <td> <input type="text" name="txtNombre" size="25"
+                                    id="txtNombre"> </td>
+                    </tr>
+                    <tr>
+                        <td>Apellido Paterno:</td>
+                        <td> <input type="text" name="txtAppat" size="15"
+                                    id="txtAppat"> </td>
+                    </tr>
+                    <tr>
+                        <td>Apellido Materno:</td>
+                        <td> <input type="text" name="txtApmat" size="15"
+                                    id="txtApmat"> </td>
+                    </tr>
+                    <tr>
+                        <td>ID Dirección:</td>
+                        <td> <input type="number" name="txtDir" 
+                                    id="txtDir"> </td>
+                    </tr>
+                    <tr>
+                        <td>Fecha de Nacimiento:</td>
+                        <td> <input type="date" name="txtFechanac" 
+                                    id="txtFechanac"> </td>
+                    </tr>
+                    <tr>
+                        <td>Número de Teléfono Particular:</td>
+                        <td> <input type="text" name="txtTel" size="10"
+                                    id="txtTel"> </td>
+                    </tr>
+                    <tr>
+                        <td>Número de Teléfono Celular:</td>
+                        <td> <input type="text" name="txtCel" size="8"
+                                    id="txtCel"> </td>
+                    </tr>
+                    <tr>
+                    <td>Forma de Pago:</td>
+                    <td> <input type="number" name="txtFormapago" 
+                                id="txtFormapago"> </td>
+                </tr>
+                <tr>
+                    <td>Usuario:</td>
+                    <td> <input type="text" name="txtUser" size="12" 
+                                id="txtUser"> </td>
+                </tr>
+                <tr>
+                    <td>Contraseña:</td>
+                    <td> <input type="password" name="txtPass" size="8" 
+                                id="txtPass"> </td>
+                </tr>
+                    <tr>
+                        <td>Privilegio:</td>
+                        <td> <input type="number" name="txtPrivilegio" 
+                                    id="txtPrivilegio"> </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" > <input type="submit" value="Registrar" 
+                                    id="btnRegistrar"> </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        <br>
+        <div class="containerConsulta" >
+            <a href="MostrarUsuarios.jsp">Consulta General de todos los Usuarios</a>
         </div>
     </body>
 </html>

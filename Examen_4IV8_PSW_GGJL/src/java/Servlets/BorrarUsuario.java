@@ -6,20 +6,19 @@
 
 package Servlets;
 
-import Modelo.MUsuario;
+import Control.AccionesUsuario;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 /**
  *
  * @author rash2
  */
-public class VerificarUsuario extends HttpServlet {
+public class BorrarUsuario extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -36,42 +35,13 @@ public class VerificarUsuario extends HttpServlet {
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
             
-            //obtener los parametr
+            int id =Integer.parseInt(request.getParameter("id"));
             
-            String user, pass;
+            int status = AccionesUsuario.borrarUsuario(id);
             
-            user = request.getParameter("txtUsuario");
-            pass = request.getParameter("txtPassword");
-            
-            //generamos el objeto de nuestro usuario
-            MUsuario u = new MUsuario();
-            
-            //verificamos al tipo de usuario
-            u = u.verificarUsuario(user, pass);
-            
-            //verificamos la sesion 
-            if(u!=null){
-                /*
-                El usuario existe en la BD y la clave es correcta
-                */
-                
-                //para la BD
-                HttpSession sesionu = request.getSession(true);
-                //Ahora necesitamos saber el tipo de usuario a través de sus atributos
-                sesionu.setAttribute("usuario", u);
-                
-                //para lo que el usuario escribió
-                HttpSession sesionuok = request.getSession();
-                sesionuok.setAttribute("usuario", user);
-                
-                if(u.getPrivilegio_usuario() == 0){
-                    //va a ser el cliente
-                    response.sendRedirect("MostrarHelados.jsp");
-                }else{
-                    response.sendRedirect("MostrarAdministrador.jsp");
-                }
+            if(status > 0){
+                response.sendRedirect("MostrarUsuarios.jsp");
             }else{
-                //el usuario no está registrado o no existe
                 response.sendRedirect("error.jsp");
             }
             

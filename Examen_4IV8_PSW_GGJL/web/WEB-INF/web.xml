@@ -20,6 +20,14 @@
         <servlet-name>GuardarUsuario</servlet-name>
         <servlet-class>Servlets.GuardarUsuario</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ActualizarUsuario</servlet-name>
+        <servlet-class>Servlets.ActualizarUsuario</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>BorrarUsuario</servlet-name>
+        <servlet-class>Servlets.BorrarUsuario</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>VerificarUsuario</servlet-name>
         <url-pattern>/VerificarUsuario</url-pattern>
@@ -39,6 +47,14 @@
     <servlet-mapping>
         <servlet-name>GuardarUsuario</servlet-name>
         <url-pattern>/GuardarUsuario</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ActualizarUsuario</servlet-name>
+        <url-pattern>/ActualizarUsuario</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>BorrarUsuario</servlet-name>
+        <url-pattern>/BorrarUsuario</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

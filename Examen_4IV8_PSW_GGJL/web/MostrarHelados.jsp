@@ -4,6 +4,7 @@
     Author     : rash2
 --%>
 
+<%@page import="Modelo.MUsuario"%>
 <%@page import="Modelo.DCompra"%>
 <%@page import="Modelo.MProducto"%>
 <%@page import="java.util.Vector"%>
@@ -12,6 +13,13 @@
 <%
     String usuario = "";
     HttpSession sesionuok = request.getSession();
+    
+    //instancia de la clase MUsuario
+    MUsuario u = new MUsuario();
+    
+    //establecemos nuestro atributo
+    sesionuok.setAttribute("usuario", u.getNombre_usuario());
+    
     if(sesionuok.getAttribute("usuario")==null){
         
     %>
@@ -39,7 +47,9 @@
         
         <br>
         <h1>Botón de cerrar sesion (redireccion a servlet Cerrar sesion) invalidate y regreso a index</h1>
-        
+        <br>
+        <h2>¡Bienvenido <% out.println(sesionuok.getAttribute("usuario")); %>!</h2>
+  
         <%
     
             
