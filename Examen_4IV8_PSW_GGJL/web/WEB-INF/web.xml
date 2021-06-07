@@ -28,6 +28,14 @@
         <servlet-name>BorrarUsuario</servlet-name>
         <servlet-class>Servlets.BorrarUsuario</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ControladorIMG</servlet-name>
+        <servlet-class>Servlets.ControladorIMG</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Controlador</servlet-name>
+        <servlet-class>Servlets.Controlador</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>VerificarUsuario</servlet-name>
         <url-pattern>/VerificarUsuario</url-pattern>
@@ -55,6 +63,14 @@
     <servlet-mapping>
         <servlet-name>BorrarUsuario</servlet-name>
         <url-pattern>/BorrarUsuario</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ControladorIMG</servlet-name>
+        <url-pattern>/ControladorIMG</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Controlador</servlet-name>
+        <url-pattern>/Controlador</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

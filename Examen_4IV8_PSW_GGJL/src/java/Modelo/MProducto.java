@@ -7,6 +7,7 @@
 package Modelo;
 
 import Control.Conexion;
+import java.io.InputStream;
 
 /**
  *
@@ -23,8 +24,10 @@ public class MProducto {
     stock_producto
     */
     
-    private int id_producto, id_sabor, id_cantidad, id_tamano;
-    private int id_presentacion, stock_producto;
+    private int id_producto;
+    private String nombre_producto, descripcion_producto;
+    private InputStream foto_producto;
+    private int stock_producto;
     private double precio_producto;
     
     public MProducto(){
@@ -50,14 +53,10 @@ public class MProducto {
             while(rs.next()){
                 MProducto producto = new MProducto();
                 producto.setId_producto(rs.getInt("id_producto"));
-                producto.setId_sabor(rs.getInt("id_sabor"));
-                //join
-                //csabores.setNombre_sabor(rs.getString("nom_sabor);
-                producto.setId_cantidad(rs.getInt("id_cantidad"));
-                producto.setId_tamano(rs.getInt("id_tamano"));
-                producto.setId_presentacion(rs.getInt("id_presentacion"));
-                producto.setPrecio_producto(rs.getDouble("precio_producto"));
+                producto.setNombre_producto(rs.getString("nombre_producto"));
+                producto.setDescripcion_producto(rs.getString("descripcion_producto"));
                 producto.setStock_producto(rs.getInt("stock_producto"));
+                producto.setPrecio_producto(rs.getDouble("precio_producto"));
                 lista.add(producto);
 
             }
@@ -101,10 +100,10 @@ public class MProducto {
             while(rs.next()){
                 producto = new MProducto();
                 producto.setId_producto(rs.getInt("id_producto"));
-                producto.setId_sabor(rs.getInt("id_sabor"));
-                producto.setId_cantidad(rs.getInt("id_cantidad"));
-                producto.setPrecio_producto(rs.getDouble("precio_producto"));
+                producto.setNombre_producto(rs.getString("nombre_producto"));
+                producto.setDescripcion_producto(rs.getString("descripcion_producto"));
                 producto.setStock_producto(rs.getInt("stock_producto"));
+                producto.setPrecio_producto(rs.getDouble("precio_producto"));
             }
         }catch(SQLException sq){
             System.out.println("Error al buscar el producto");
@@ -172,36 +171,28 @@ public class MProducto {
         this.id_producto = id_producto;
     }
 
-    public int getId_sabor() {
-        return id_sabor;
+    public String getNombre_producto() {
+        return nombre_producto;
     }
 
-    public void setId_sabor(int id_sabor) {
-        this.id_sabor = id_sabor;
+    public void setNombre_producto(String nombre_producto) {
+        this.nombre_producto = nombre_producto;
     }
 
-    public int getId_cantidad() {
-        return id_cantidad;
+    public String getDescripcion_producto() {
+        return descripcion_producto;
     }
 
-    public void setId_cantidad(int id_cantidad) {
-        this.id_cantidad = id_cantidad;
+    public void setDescripcion_producto(String descripcion_producto) {
+        this.descripcion_producto = descripcion_producto;
     }
 
-    public int getId_tamano() {
-        return id_tamano;
+    public InputStream getFoto_producto() {
+        return foto_producto;
     }
 
-    public void setId_tamano(int id_tamano) {
-        this.id_tamano = id_tamano;
-    }
-
-    public int getId_presentacion() {
-        return id_presentacion;
-    }
-
-    public void setId_presentacion(int id_presentacion) {
-        this.id_presentacion = id_presentacion;
+    public void setFoto_producto(InputStream foto_producto) {
+        this.foto_producto = foto_producto;
     }
 
     public int getStock_producto() {
@@ -219,6 +210,6 @@ public class MProducto {
     public void setPrecio_producto(double precio_producto) {
         this.precio_producto = precio_producto;
     }
-    
+
     
 }
