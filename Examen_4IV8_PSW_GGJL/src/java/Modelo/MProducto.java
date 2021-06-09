@@ -52,11 +52,11 @@ public class MProducto {
             
             while(rs.next()){
                 MProducto producto = new MProducto();
-                producto.setId_producto(rs.getInt("id_producto"));
-                producto.setNombre_producto(rs.getString("nombre_producto"));
-                producto.setDescripcion_producto(rs.getString("descripcion_producto"));
-                producto.setStock_producto(rs.getInt("stock_producto"));
-                producto.setPrecio_producto(rs.getDouble("precio_producto"));
+                producto.setId_producto(rs.getInt("id_pro"));
+                producto.setNombre_producto(rs.getString("nom_pro"));
+                producto.setDescripcion_producto(rs.getString("des_pro"));
+                producto.setStock_producto(rs.getInt("stock_pro"));
+                producto.setPrecio_producto(rs.getDouble("precio_pro"));
                 lista.add(producto);
 
             }
@@ -90,7 +90,7 @@ public class MProducto {
         
         try{
             con = Conexion.getConexion();
-            String q = "SELECT * FROM MProducto WHERE id_producto = ?";
+            String q = "SELECT * FROM MProducto WHERE id_pro = ?";
             ps = con.prepareStatement(q);
             
             ps.setInt(1, codigoProducto);
@@ -99,11 +99,11 @@ public class MProducto {
             
             while(rs.next()){
                 producto = new MProducto();
-                producto.setId_producto(rs.getInt("id_producto"));
-                producto.setNombre_producto(rs.getString("nombre_producto"));
-                producto.setDescripcion_producto(rs.getString("descripcion_producto"));
-                producto.setStock_producto(rs.getInt("stock_producto"));
-                producto.setPrecio_producto(rs.getDouble("precio_producto"));
+                producto.setId_producto(rs.getInt("id_pro"));
+                producto.setNombre_producto(rs.getString("nom_pro"));
+                producto.setDescripcion_producto(rs.getString("des_pro"));
+                producto.setStock_producto(rs.getInt("stock_pro"));
+                producto.setPrecio_producto(rs.getDouble("precio_pro"));
             }
         }catch(SQLException sq){
             System.out.println("Error al buscar el producto");
@@ -131,8 +131,8 @@ public class MProducto {
         try{
             con = Conexion.getConexion();
             for(MProducto producto : vp){
-                String q = "UPDATE MProducto SET stock_producto = ? "
-                        + "WHERE id_producto = ?";
+                String q = "UPDATE MProducto SET stock_pro = ? "
+                        + "WHERE id_pro = ?";
                 ps = con.prepareStatement(q);
                 
                 ps.setInt(1, producto.getStock_producto());

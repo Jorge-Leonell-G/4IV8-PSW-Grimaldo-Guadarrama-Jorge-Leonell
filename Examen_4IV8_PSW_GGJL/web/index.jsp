@@ -3,6 +3,9 @@
     Created on : 6/06/2021, 08:04:23 PM
     Author     : rash2
 --%>
+<!-- 
+No funciona :c
+%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> -->
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -43,10 +46,10 @@
                       Iniciar sesión
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <li><a class="dropdown-item" href="#">Action</a></li>
-                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><a class="dropdown-item" href="index.html">Iniciar sesión</a></li>
+                      <li><a class="dropdown-item" href="index.html">Registrar</a></li>
                       <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                      <li><a class="dropdown-item" href="#"></a></li>
                     </ul>
                   </li>
                   </ul>  
@@ -63,8 +66,8 @@
                             <label>${p.getNombre_producto()}</label>
                         </div>
                         <div class="card-body" >
-                            <i>${p.getPrecio_producto()}</i>
-                            <img src="ControladorIMG?=id=${p.getId()}" width="200" height="180"
+                            <i>$.${p.getPrecio_producto()}</i>
+                            <img src="ControladorIMG?=id=${p.getId_producto()}" width="200" height="180"
                         </div>
                         <div class="card-footer text-center" >
                             <label>${p.getDescripcion_producto()}</label>

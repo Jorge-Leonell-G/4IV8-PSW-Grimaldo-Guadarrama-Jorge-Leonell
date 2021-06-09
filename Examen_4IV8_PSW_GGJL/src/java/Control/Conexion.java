@@ -20,7 +20,7 @@ public class Conexion {
             Class.forName("com.mysql.jdbc.Driver");
             String url, username, password;
             
-            url = "jdbc:mysql://localhost/ExamenHelado4IV8";
+            url = "jdbc:mysql://localhost/CarritoMVC";
             username = "root";
             password = "Shellframex731--";
             

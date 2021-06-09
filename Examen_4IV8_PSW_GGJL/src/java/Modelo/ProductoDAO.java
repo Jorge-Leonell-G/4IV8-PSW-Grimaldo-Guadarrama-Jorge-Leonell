@@ -28,22 +28,22 @@ public class ProductoDAO {
     PreparedStatement ps;
     ResultSet rs;
     
-    public MProducto listarId(int id){
-        String q = "SELECT * FROM MProducto WHERE id_producto ="+id;
-        MProducto p = new MProducto();
+    public Producto listarId(int id){
+        Producto p = new Producto();
         try{
-           con = cn.getConexion();
-           ps = con.prepareStatement(q);
-           rs = ps.executeQuery();
-           while(rs.next()){
-                p.setId_producto(rs.getInt(1));
-                p.setNombre_producto(rs.getString(2));
-                p.setDescripcion_producto(rs.getString(3));
-                p.setFoto_producto(rs.getBinaryStream(4));
-                p.setStock_producto(rs.getInt(5));
-                p.setPrecio_producto(rs.getDouble(6));
+            
+            Connection con = Conexion.getConexion();
+            String q = "SELECT * FROM MProducto WHERE id_pro ="+id;
                 
-           }
+            PreparedStatement ps = con.prepareStatement(q);
+           
+            ps.setInt(1, p.getId_producto());
+            ps.setString(2, p.getNombre_producto());
+            ps.setString(3, p.getDescripcion_producto());
+            ps.setInt(4, p.getStock_producto());
+            ps.setDouble(5, p.getPrecio_producto());
+       
+           
         }catch(Exception e){
             
         }
@@ -51,18 +51,18 @@ public class ProductoDAO {
     }
     
     public List listar(){
-        List<MProducto> productos = new ArrayList();
+        List<Producto> productos = new ArrayList();
         String q = "SELECT * FROM MProducto";
         try{
             con = cn.getConexion();
             ps = con.prepareStatement(q);
             rs = ps.executeQuery();
             while(rs.next()){
-                MProducto p = new MProducto();
+                Producto p = new Producto();
                 p.setId_producto(rs.getInt(1));
                 p.setNombre_producto(rs.getString(2));
-                p.setDescripcion_producto(rs.getString(3));
-                p.setFoto_producto(rs.getBinaryStream(4));
+                p.setFoto_producto(rs.getBinaryStream(3));
+                p.setDescripcion_producto(rs.getString(4));
                 p.setStock_producto(rs.getInt(5));
                 p.setPrecio_producto(rs.getDouble(6));
                 productos.add(p);
@@ -74,7 +74,7 @@ public class ProductoDAO {
     }
     
     public void listarIMG(int id, HttpServletResponse response){
-        String q = "SELECT * FROM MProducto WHERE id_producto ="+id;
+        String q = "SELECT * FROM MProducto WHERE id_pro ="+id;
         InputStream inputStream = null;
         OutputStream outputStream = null;
         BufferedInputStream bufferedInputStream = null;
@@ -86,7 +86,7 @@ public class ProductoDAO {
             ps = con.prepareStatement(q);
             rs = ps.executeQuery();
             if(rs.next()){
-                inputStream = rs.getBinaryStream("foto");
+                inputStream = rs.getBinaryStream("foto_pro");
             }
             bufferedInputStream = new BufferedInputStream(inputStream);
             bufferedOutputStream = new BufferedOutputStream(outputStream);

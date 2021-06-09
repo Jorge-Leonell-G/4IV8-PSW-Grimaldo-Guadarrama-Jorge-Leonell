@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;  
+  }
+  
+  body{
+      background-color: #8a73be;
+      font-family: 'Courier New', Courier, monospace;
+      overflow-x: hidden;
+  }
+  
+  header{
+      background: #660a04;
+      margin: 20px 0;
+  }
+  
+  header h1{
+      color:#fff;
+      padding: 20px 0;
+      text-align: center;
+  }
+  
+  .div-datos{
+      min-height: 80vh;
+      display: inline-flexbox;
+      align-items: center;
+      justify-content: center;
+      width: 20%;
+      margin: auto;
+      padding: 10px;
+  }
+  
+  .div-datos form{
+      height: 700px;
+      width: 360px;
+      text-align: center;
+      align-items: center;
+      border-radius: 5px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, .3);
+  }
+  
+  .div-datos form input {
+      height: 40px;
+      width: 82%;
+      font-size: 17px;
+      padding: 0 10px;
+      margin: 15px 0;
+      letter-spacing: 1px;
+      border-radius: 15px;
+  }
+  
+  .div-datos form input[type="submit"]:hover {
+      letter-spacing: 3px;
+      transition: .3s ease;
+  }
+  
+  .div-datos form input[type="submit"] {
+      color: white;
+      width: 90%;
+      cursor: pointer;
+      background: rgb(121, 21, 83);
+      margin-top: 30px;
+      border-radius: 50px;
+  }
+  
+  
+  

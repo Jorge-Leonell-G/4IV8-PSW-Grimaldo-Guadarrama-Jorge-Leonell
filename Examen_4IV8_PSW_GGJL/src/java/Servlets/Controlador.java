@@ -8,6 +8,7 @@ package Servlets;
 
 import Modelo.Carrito;
 import Modelo.MProducto;
+import Modelo.Producto;
 import Modelo.ProductoDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -25,8 +26,8 @@ import javax.servlet.http.HttpServletResponse;
 public class Controlador extends HttpServlet {
     
     ProductoDAO pdao = new ProductoDAO();
-    MProducto p = new MProducto();
-    List<MProducto> productos = new ArrayList();
+    Producto p = new Producto();
+    List<Producto> productos = new ArrayList();
     
     List<Carrito> listaCarrito = new ArrayList();
     int item;

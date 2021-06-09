@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Registro de usuarios</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./CSS/crudestilo.css">
+        <script src="./JS/crudvalidacion.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1>CRUD 4IV8 PSW</h1>
+        </header>
+       <div class="main-container" >
+           <div class="div-datos">
+            <form action="index.html" method="get" id="form" name="formulario" onsubmit="return validarAlertas(event)">
+                <h3>Registrar</h3>
+                <div class="container">
+                    <input type="text" name="nombre" placeholder="Usuario" required maxlength="35" onkeypress="return validarNombre(event)">
+                </div>
+                <div class="container">
+                    <input type="text" name="appat" placeholder="Apellido paterno" required maxlength="35" onkeypress="return validarNombre(event)">
+                </div>
+                <div class="container">
+                    <input type="text" name="apmat" placeholder="Apellido materno" required maxlength="35" onkeypress="return validarNombre(event)">
+                </div>
+                <div class="container">
+                    <input type="text" name="edad" placeholder="Edad" required maxlength="35" onkeypress="return validarNumero(event)">
+                </div>
+                <div class="container">
+                    <input type="email" name="correo" placeholder="Correo electrónico" required="" onsubmit="return validarCorreo(event)">
+                </div>
+                <input type="submit" value="Registrar usuario" name="enviar" onclick="return validarAlertas()">
+                <input type="submit" value="Eliminar datos" name="eliminar" onclick="return Eliminar()">
+            </form>
+            </div> 
+            <br>
+            <div class="containerConsulta" >
+                <br>      
+                <form method="get" name="consultarregistro" action="Consultar">
+                    <h3>Consulta</h3>
+                    <input type="submit" value="Consultar Tabla de Usuarios" >
+                </form>
+            </div>
+            <br>
+            <div class="containerEliminar" >
+                <br>
+                <form method="post" name="formularioeliminar" action="Eliminar">
+                    <h3>Eliminar</h3>
+                    <label>ID del Usuario a Eliminar</label>
+                    <input type="number" onkeypress="return validarNumero(event)">
+                    <br><br>
+                    <input type="submit" name="ideliminar" value="Eliminar Usuario" onclick="return validarAlertasElim()">
+                </form>
+            </div>
+            <br>
+            <div class="containerActualizar" >
+                <br>
+                <form method="post" name="formularioactualizar" action="Actualizar" >
+                    <h3>Actualizar</h3>
+                    <label>ID del Usuario a Actualizar</label>
+                    <input type="number" name="idactualizar" >
+                    <br>
+                <div class="container">
+                    <input type="text" name="nombre_act" placeholder="Usuario" required maxlength="35" onkeypress="return validarNombre(event)">
+                </div>
+                <div class="container">
+                    <input type="text"  name="appat_act" placeholder="Apellido paterno" required maxlength="35" onkeypress="return validarNombre(event)">
+                </div>
+                <div class="container">
+                    <input type="text"  name="apmat_act" placeholder="Apellido materno" required maxlength="35" onkeypress="return validarNombre(event)">
+                </div>
+                <div class="container">
+                    <input type="text"  name="edad_act" placeholder="Edad" required maxlength="35" onkeypress="return validarNumero(event)">
+                </div>
+                <div class="container">
+                    <input type="email" name="correo_act" placeholder="Correo electrónico" required="" onsubmit="return validarCorreo(event)">
+                </div>
+                    <br>
+                    <input type="submit" value="Actualizar Datos" >
+            </form>
+            </div>
+    </div>
+    </body>
+</html>

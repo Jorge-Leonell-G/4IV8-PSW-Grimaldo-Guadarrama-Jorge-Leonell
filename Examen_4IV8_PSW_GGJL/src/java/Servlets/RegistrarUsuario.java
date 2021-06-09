@@ -44,9 +44,9 @@ public class RegistrarUsuario extends HttpServlet {
             int status = 0;
             try{
                 Connection con = Conexion.getConexion();
-                String q = "INSERT INTO MUsuario (nombre_usuario, appat_usuario, apmat_usuario, "
-                        + "id_dir, fechanac_usuario, tel_usuario, cel_usuario, id_formapago, user_usuario, "
-                        + "pass_usuario, privilegio_usuario)"
+                String q = "INSERT INTO MUsuario (nom_usu, appat_usu, apmat_usu, "
+                        + "id_dir, fechanac_usu, tel_usu, cel_usu, id_formapago, user_usu, "
+                        + "pass_usu, privilegio_usu)"
                         + "VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
                 
                 PreparedStatement ps = con.prepareStatement(q);
