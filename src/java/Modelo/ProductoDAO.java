@@ -40,13 +40,14 @@ public class ProductoDAO {
            
             ps.setInt(1, p.getId_producto());
             ps.setString(2, p.getNombre_producto());
-            ps.setString(3, p.getDescripcion_producto());
+            ps.setBinaryStream(3, p.getImagen_producto());
+            ps.setString(4, p.getDescripcion_producto());
             ps.setInt(4, p.getStock_producto());
             ps.setDouble(5, p.getPrecio_producto());
        
            
         }catch(Exception e){
-            
+            System.out.println("Error al listar los datos");
         }
         return p;
     }

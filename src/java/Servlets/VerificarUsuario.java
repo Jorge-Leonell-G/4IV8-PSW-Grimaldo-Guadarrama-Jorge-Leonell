@@ -65,7 +65,7 @@ public class VerificarUsuario extends HttpServlet {
                 
                 if(u.getPrivilegio_usuario() == 0){
                     //va a ser el cliente
-                    response.sendRedirect("carrito.jsp");
+                    response.sendRedirect("index.jsp");
                 }else{
                     response.sendRedirect("MostrarAdministrador.jsp");
                 }

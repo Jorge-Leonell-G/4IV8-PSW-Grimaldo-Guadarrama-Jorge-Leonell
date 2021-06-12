@@ -42,8 +42,8 @@
                       Iniciar sesión
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <li><a class="dropdown-item" href="#">Iniciar Sesión</a></li>
-                      <li><a class="dropdown-item" href="registrousuarios.jsp">Registrar</a></li>
+                      <li><a class="dropdown-item" href="iniciarsesion.html">Iniciar Sesión</a></li>
+                      <li><a class="dropdown-item" href="registro.html">Registrar</a></li>
                     </ul>
                   </li>
                   </ul>  

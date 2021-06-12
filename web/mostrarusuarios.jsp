@@ -62,6 +62,6 @@
             </tbody>
         </table>
         <br>
-        <a href="index.html">Regresar al menú principal</a>
+        <a href="index.jsp">Regresar al menú principal</a>
     </body>
 </html>

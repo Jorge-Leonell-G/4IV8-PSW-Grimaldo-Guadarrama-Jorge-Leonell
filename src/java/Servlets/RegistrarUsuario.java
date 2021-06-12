@@ -16,12 +16,33 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import java.sql.Connection;
+import java.sql.Statement;
+import java.sql.ResultSet;
+import javax.servlet.ServletConfig;
+
 /**
  *
  * @author leone
  */
-public class RegistrarUsuario extends HttpServlet {
 
+
+public class RegistrarUsuario extends HttpServlet {
+    
+    /*
+    //varaibles globales para la manipulacion de la BD
+    private Connection con;
+    private Statement set;
+    private ResultSet rs;
+    
+    //metodo constructor del servlet para la inicializacion de nuestra BD
+    public void init(ServletConfig cfg) throws ServletException{
+        
+        //trazar la ruta al servidor de la BD
+        String URL = "jdbc:mysql:3306//localhost/MUsuario";
+    }
+    */
+    
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -65,6 +86,7 @@ public class RegistrarUsuario extends HttpServlet {
                 
                 status = ps.executeUpdate();
                 System.out.println("¡Registro exitoso del usuario!");
+                response.sendRedirect("registrousuarios.jsp");
                 con.close();
                 
             }catch(Exception e){

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>¡Regístrate!</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>
+        <h1>Registro de Usuarios</h1>
+            <br>
+            <form method="post" action="RegistrarUsuario" name="register" >
+                <table>
+                    <tr>
+                        <td>Nombre:</td>
+                        <td> <input type="text" name="txtNombre" size="30"
+                                    id="txtNombre"> </td>
+                    </tr>
+                    <tr>
+                        <td>Apellido Paterno:</td>
+                        <td> <input type="text" name="txtAppat" size="20"
+                                    id="txtAppat"> </td>
+                    </tr>
+                    <tr>
+                        <td>Apellido Materno:</td>
+                        <td> <input type="text" name="txtApmat" size="20"
+                                    id="txtApmat"> </td>
+                    </tr>
+                    <tr>
+                        <td>Dirección:</td>
+                        <td> <input type="text" name="txtDir" size="50"
+                                    id="txtDir"> </td>
+                    </tr>
+                    <tr>
+                        <td>Fecha de Nacimiento:</td>
+                        <td> <input type="date" name="txtFechanac" 
+                                    id="txtFechanac"> </td>
+                    </tr>
+                    <tr>
+                        <td>Número de Teléfono Particular:</td>
+                        <td> <input type="text" name="txtTel" size="10"
+                                    id="txtTel"> </td>
+                    </tr>
+                    <tr>
+                        <td>Número de Teléfono Celular:</td>
+                        <td> <input type="text" name="txtCel" size="8"
+                                    id="txtCel"> </td>
+                    </tr>
+                    <tr>
+                    <td>Forma de Pago:</td>
+                    <td> <input type="number" name="txtFormapago" 
+                                id="txtFormapago"> </td>
+                </tr>
+                <tr>
+                    <td>Usuario:</td>
+                    <td> <input type="text" name="txtUser" size="20" 
+                                id="txtUser"> </td>
+                </tr>
+                <tr>
+                    <td>Contraseña:</td>
+                    <td> <input type="password" name="txtPass" size="8" 
+                                id="txtPass"> </td>
+                </tr>
+                    <tr>
+                        <td>Privilegio:</td>
+                        <td> <input type="number" name="txtPrivilegio" 
+                                    id="txtPrivilegio"> </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" > <input type="submit" value="Registrar" 
+                                    id="btnRegistrar"> </td>
+                    </tr>
+                    <br><br>
+                    <tr>
+                        <td colspan="2" > <input type="delete" value="Borrar" 
+                                    id="btnBorrar"> </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        <br>
+        <div class="containerConsulta" >
+            <a href="mostrarusuarios.jsp">Consulta General de todos los Usuarios</a>
+            <br><br>
+            <a href="index.jsp">Regresar al Menú Principal</a>
+        </div>
+    </body>
+</html>

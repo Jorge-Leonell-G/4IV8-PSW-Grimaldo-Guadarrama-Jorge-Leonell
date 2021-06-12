@@ -42,11 +42,11 @@
                   <ul  class="navbar-nav">
                       <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Iniciar sesión
+                      Opciones de Usuario
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                       <li><a class="dropdown-item" href="iniciarsesion.html">Iniciar sesión</a></li>
-                      <li><a class="dropdown-item" href="registrousuarios.jsp">Registrar</a></li>
+                      <li><a class="dropdown-item" href="registro.html">Registrar</a></li>
                     </ul>
                   </li>
                   </ul>  
